@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔴🟣[S.T.A.R.S.]🟣🔴</title>
+    <link rel="stylesheet" href="style_index.css">
+    <script src="script_index.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+</head>
+<body>
+    <div class="Titulo">
+        <h1>[S.T.A.R.S.]</h1>
+        <h2>Sistema de Tácticas Arquitecturales Recomendadas para Software</h2>
+        <h3>Para Trade-off</h3>
+        <h4><span class="D">Disponibilidad</span><span class="U">Usabilidad</span></h4>
+    </div>
+    <div class="Introduccion">
+        <div class="ContTarjetas">
+            <div class="Tarjeta1 AcercaDe">
+                <div>
+                    <h3>
+                        <span class="material-symbols-outlined">
+                            info
+                        </span>
+                        Acerca de...
+                    </h3>
+                    <p>
+                        El <b>[S.T.A.R.S]</b> (Sistema de Tácticas para la Arquitectura de Recomendaciones de Software) 
+                        es un proyecto desarrollado en la asignatura <i>"Arquitectura Inteligente de Desarrollo 
+                        Híbrido"</i> del plan de estudios de la carrera de Ingeniería en Computación Inteligente 
+                        de la Universidad Autónoma de Aguascalientes.
+                        <br>
+                        <br>
+                        Su principal objetivo es servir como una <span>herramienta de apoyo para el arquitecto de software</span>, 
+                        facilitando la toma de decisiones estratégicas durante el diseño de sistemas.
+                        <br>
+                        <br>
+                        El sistema se basa en un cuestionario interactivo que <span>recopila las preferencias y prioridades 
+                        del arquitecto en términos de atributos de calidad</span>, como disponibilidad y usabilidad. A partir 
+                        de las respuestas, <b>[S.T.A.R.S]</b> <span>genera un mapa de tácticas</span> ajustado a las decisiones tomadas, 
+                        utilizando un análisis de compensaciones (trade-off) entre estos atributos.
+                        <br>
+                        <br>
+                        Esta herramienta permite al arquitecto evaluar cómo las tácticas recomendadas impactan en el 
+                        diseño, optimizando el balance entre necesidades específicas del sistema y las restricciones 
+                        técnicas.
+                    </p>
+                </div>
+            </div>
+            <div class="Tarjeta1 ConstSol">
+                <div>
+                    <h3>
+                        <span class="material-symbols-outlined">
+                            emoji_objects
+                        </span>
+                        Construcción de Soluciones
+                    </h3>
+                    <p>
+                        La manera en la que el mapa de tácticas es construido, esta basada en las tácticas elegidas 
+                        para la construcción de soluciones a los requerimientos del Sistema Integral de Información 
+                        y Modernización Administrativa (e-siima) de la UAA.
+                        <br><br>
+                        Los requerimientos fueron seleccionados de tal manera que fueran <span>dos requerimientos enfocados 
+                        en el atributo de calidad de disponibilidad y dos enfocados en el de usabilidad</span>.
+                        <br><br>
+                        Dichos requerimientos elegidos para su solución se presentan a continuación.
+                    </p>
+                </div>
+            </div>
+            <div class="Tarjeta2 Requerimientos">
+                <div>
+                    <h3>
+                        <span class="material-symbols-outlined">
+                            dvr
+                        </span>
+                        Requerimientos
+                    </h3>
+                    <div class="ContReq">
+                        <div>
+                            <h4>Requerimiento #1</h4>
+                            <h5 class="RD">Disponibilidad</h5>
+                            <p>
+                                <b>Sección 1.1. Control Escolar.</b><br>
+                                <i>Apartado 1.1.9. Registro de Carga Académica.</i><br>
+                                Durante los períodos de reinscripción, el sitio experimenta un alto tráfico 
+                                de usuarios, lo que provoca que las peticiones se realicen de manera muy 
+                                lenta o que el sistema colapse.
+                            </p>
+                        </div>
+                        <div>
+                            <h4>Requerimiento #2</h4>
+                            <h5 class="RD">Disponibilidad</h5>
+                            <p>
+                                <b>Sección 1.3. Formación Integral.</b><br>
+                                <i>Apartado 1.3.1. Inscripción a Cursos.</i><br>
+                                Durante el periodo de inscripción a este tipo de cursos el sistema presenta 
+                                alto tráfico de usuarios y por tanto lentitud. La información mostrada al mostrar 
+                                los cursos de este tipo no se actualiza hasta recargar la página, lo que es un 
+                                problema al momento de inscribirse.
+                            </p>
+                        </div>
+                        <div>
+                            <h4>Requerimiento #3</h4>
+                            <h5 class="RU">Usabilidad</h5>
+                            <p>
+                                <b>Todas las secciones.</b><br>
+                                <i>Todos los apartados.</i><br>
+                                El sistema no cuenta con un diseño responsive, lo que significa que no se adapta 
+                                correctamente a las dimensiones de las pantallas en dispositivos móviles por lo 
+                                que la interfaz se muestra de manera desorganizada o desajustada en pantallas más 
+                                pequeñas, lo que obliga al usuario a hacer zoom o desplazarse horizontalmente para 
+                                ver el contenido completo.
+                            </p>
+                        </div>
+                        <div>
+                            <h4>Requerimiento #4</h4>
+                            <h5 class="RU">Usabilidad</h5>
+                            <p>
+                                <b>Todos las secciones.</b><br>
+                                <i>Todos los apartados.</i><br>
+                                El sistema presenta experiencia de usuario confusa y desorganizada debido a la 
+                                incoherencia en los elementos visuales del sistema, ya que el tamaño de fuente pequeño 
+                                y los botones reducidos complican la lectura y selección de elementos, afectando la 
+                                navegación entre páginas del sistema.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Cuestionario">
+        <h1>Herramienta para generar Tácticas de Solución.</h1>
+        <button onclick="MostrarOcultarCuestionario()"> Iniciar cuestionario </button>
+    </div>
+    <div id="BMapa">
+        <div class="MCont">
+            <div class="Mapa">
+                <div class="MTitulo">
+                    <h1>Mapa de Tácticas Arquitecturales</h1>
+                </div>
+                <div class="MAtributo">
+                    <h2>Disponibilidad</h2>
+                    <h2>Usabilidad</h2>
+                </div>
+                <div class="MCategoria">
+                    <h3>Detectar Fallas</h3>
+                    <h3>Recuperarse de Fallas</h3>
+                    <h3>Prevenir Fallas</h3>
+                    <h3>Apoyar la Iniciativa del Usuario</h3>
+                    <h3>Apoyar la Iniciativa del Sistema</h3>
+                </div>
+                <div class="MSubcategoria">
+                    <h4>Preparación y Reparación</h4>
+                    <h4>Reintroducción</h4>
+                </div>
+                <div class="MTacticas">
+                    <div class="MD1">
+                        <div class="Tac" id="Disp1">Ping / Echo</div>
+                        <div class="Tac" id="Disp2">Monitor</div>
+                        <div class="Tac" id="Disp3">Heartbeat</div>
+                        <div class="Tac" id="Disp4">Time Stamp</div>
+                        <div class="Tac" id="Disp5">Sanity Cheking</div>
+                    </div>
+                    <div class="MD2">
+                        <div class="Tac" id="Disp6">Exception Handling</div>
+                        <div class="Tac" id="Disp7">Hardware Upgrade</div>
+                        <div class="Tac" id="Disp8">Software Upgrade</div>
+                        <div class="Tac" id="Disp9">Reconfiguration</div>
+                    </div>
+                    <div class="MD3">
+                        <div class="Tac" id="Disp10">Escalating Restart</div>
+                    </div>
+                    <div class="MD4">
+                        <div class="Tac" id="Disp11">Removal from Service</div>
+                        <div class="Tac" id="Disp12">Predictive Model</div>
+                    </div>
+                    <div class="MU1">
+                        <div class="Tac" id="Usab1">Undo</div>
+                        <div class="Tac" id="Usab2">Pause / Resume</div>
+                        <div class="Tac" id="Usab3">Aggregate</div>
+                    </div>
+                    <div class="MU2">
+                        <div class="Tac" id="Usab4">Mantain Task Model</div>
+                        <div class="Tac" id="Usab5">Mantain User Model</div>
+                        <div class="Tac" id="Usab6">Mantain System Model</div>
+                    </div>
+                </div>
+            </div>
+            <div class="ContDescripcion">
+                <h1 class="Descripcion">
+                </h1>
+                <div class="DescTactica">
+                    <h1></h1>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        
+    </footer>
+
+    <div class="Formulario" id="Cuestionario">
+        <div class="ContForm">
+            <div class="Medidor">
+                <h1>Medidor de Preferencias</h1>
+                <div class="Med_D_U">
+                    <div class="ContBar">
+                        <div id="Bar">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Labels">
+                    <h3>Disponibilidad</h3>
+                    <h3>Usabilidad</h3>
+                </div>
+                <h2>Enfoque de Respuestas:</h2>
+                <h3 id="EnfRes"><span id="Enf">Neutro</span> <span id="PctEnf">(0%)</span></h3>
+                <h2>Preguntas de Disponibilidad Contestadas:</h2>
+                <h3 id="PDisp">0/12</h3>
+                <h2>Preguntas de Usabilidad Contestadas:</h2>
+                <h3 id="PUsab">0/6</h3>
+                <h2>Total de Preguntas Contestadas:</h2>
+                <h3 id="PTot">0/19</h3>
+                <button onclick="MostrarOcultarCuestionario()"><span class="material-symbols-outlined">chevron_backward</span></button>
+            </div>
+            <div class="Preguntas">
+                <form id="Form">
+                    <div class="IntCuestionario">
+                        <h1>Cuestionario de Tácticas para Arquitectura de Software. 🚀</h1>
+                        <p>
+                            Este cuestionario está diseñado como una herramienta para arquitectos de software, 
+                            ayudándoles a identificar las tácticas más adecuadas para satisfacer las prioridades 
+                            específicas de su proyecto. Cada pregunta aborda una táctica que puede ser implementada 
+                            para mejorar un atributo de calidad particular, considerando las implicaciones técnicas 
+                            y de diseño.
+                            <br><br>
+                            A medida que respondas las preguntas, un medidor irá ajustándose para reflejar tus 
+                            preferencias y prioridades en el balance entre disponibilidad y usabilidad. Este enfoque 
+                            te permitirá visualizar cómo las decisiones afectan el trade-off entre estos atributos 
+                            clave, ayudándote a tomar decisiones informadas y estratégicas.
+                            <br><br>
+                            Responde cuidadosamente teniendo en cuenta las prioridades y desafíos específicos de tu 
+                            proyecto. Cada decisión contribuirá a la construcción de una solución arquitectónica 
+                            sólida, alineada con tus objetivos y las expectativas del sistema.
+                        </p>
+                        <h3>🔍 Responde las siguientes preguntas</h3>
+                        <div class="ContPreguntaI">
+                            <div class="Pregunta">
+                                <p>
+                                    Para desarrollar las soluciones en el sistema y alcanzar los objetivos establecidos se 
+                                    busca que el sistema:
+                                </p>
+                                <div class="ContOpc">
+                                    <input type="radio" name="Enfoque" id="EDisp" value="1" required>
+                                    <label for="EDisp">Tenga un enfoque con una visión inclinada propiamente a la disponibilidad para el usuario.</label>
+                                    <input type="radio" name="Enfoque" id="Balance" value="2">
+                                    <label for="Balance">Tenga un enfoque equilibrado para lograr un balance óptimo en el trade-off de disponibilidad – usabilidad para el usuario.</label>
+                                    <input type="radio" name="Enfoque" id="EUsab" value="3">
+                                    <label for="EUsab">Tenga un enfoque con una visión inclinada propiamente a la usabilidad para el usuario.</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ContCuestionario">
+                            <div class="Categorias">
+                                <h1 class="CD" id="D1"></h1>
+                                <h2 class="SD" id="D2">Detectar Fallas</h2>
+                                <h2 class="SD" id="D3">Recuperarse Fallas</h2>
+                                <h2 class="SD" id="D4">Prevenir Fallas</h2>
+                                <h1 class="CU" id="U1"></h1>
+                                <h2 class="SU" id="U2">Apoyar la Iniciativa del Usuario</h2>
+                                <h2 class="SU" id="U3">Apoyar la Iniciativa del Sistema</h2>
+                                <button> Generar Mapa </button>
+                            </div>
+                            <div class="ContPreguntas">
+                                <div class="Pregunta">
+                                    <p>
+                                        Permitir verificar la disponibilidad de componentes, medir tiempos de respuesta y 
+                                        evaluar la conectividad en una red, ayudándote a garantizar que los nodos estén 
+                                        activos y funcionales lo considerarías parte del desarrollo como una táctica:
+                                    </p>
+                                    <div class="ContOpc">
+                                        <input type="radio" class="OpcDisp" name="Disp1" id="Dis1Primordial" value="5" required>
+                                        <label for="Dis1Primordial">Primordial</label>
+                                        <input type="radio" class="OpcDisp" name="Disp1" id="Dis1Preferible" value="3">
+                                        <label for="Dis1Preferible">Preferible</label>
+                                        <input type="radio" class="OpcDisp" name="Disp1" id="Dis1Complementaria" value="1">
+                                        <label for="Dis1Complementaria">Complementaria</label>
+                                    </div>
+                                </div>
+                                <div class="Pregunta">
+                                    <p>
+                                        Incorporar un componente para monitorear el estado de salud del sistema, 
+                                        capaz de evaluar CPU, procesos, entradas/salidas y memoria, detectar fallas 
+                                        o congestiones en la red, iniciar auto-tests y señalar pequeñas anomalías, 
+                                        lo considerarías parte del desarrollo como una táctica:
+                                    </p>
+                                    <div class="ContOpc">
+                                        <input type="radio" class="OpcDisp" name="Disp2" id="Dis2Primordial" value="5" required>
+                                        <label for="Dis2Primordial">Primordial</label>
+                                        <input type="radio" class="OpcDisp" name="Disp2" id="Dis2Preferible" value="3">
+                                        <label for="Dis2Preferible">Preferible</label>
+                                        <input type="radio" class="OpcDisp" name="Disp2" id="Dis2Complementaria" value="1">
+                                        <label for="Dis2Complementaria">Complementaria</label>
+                                    </div>
+                                </div>
+                                <div class="Pregunta">
+                                    <p>
+                                        Implementar un mecanismo de detección de fallas que envía mensajes periódicos 
+                                        a un sistema de monitoreo para verificar el estado de un proceso, lo considerarías 
+                                        parte del desarrollo como una táctica:
+                                    </p>
+                                    <div class="ContOpc">
+                                        <input type="radio" class="OpcDisp" name="Disp3" id="Dis3Primordial" value="5" required>
+                                        <label for="Dis3Primordial">Primordial</label>
+                                        <input type="radio" class="OpcDisp" name="Disp3" id="Dis3Preferible" value="3">
+                                        <label for="Dis3Preferible">Preferible</label>
+                                        <input type="radio" class="OpcDisp" name="Disp3" id="Dis3Complementaria" value="1">
+                                        <label for="Dis3Complementaria">Complementaria</label>
+                                    </div>
+                                </div>
+                                <div class="Pregunta">
+                                    <p>
+                                        Utilizar un mecanismo para detectar secuencias incorrectas de eventos, asignando 
+                                        el estado de un reloj local a cada evento justo después de que ocurra, y utilizando
+                                        secuencias simples de números, lo considerarías parte del desarrollo como una 
+                                        táctica:
+                                    </p>
+                                    <div class="ContOpc">
+                                        <input type="radio" class="OpcDisp" name="Disp4" id="Dis4Primordial" value="5" required>
+                                        <label for="Dis4Primordial">Primordial</label>
+                                        <input type="radio" class="OpcDisp" name="Disp4" id="Dis4Preferible" value="3">
+                                        <label for="Dis4Preferible">Preferible</label>
+                                        <input type="radio" class="OpcDisp" name="Disp4" id="Dis4Complementaria" value="1">
+                                        <label for="Dis4Complementaria">Complementaria</label>
+                                    </div>
+                                </div>
+                                <div class="Pregunta">
+                                    <p>
+                                        Verificar la validez lógica de operaciones específicas o salidas de un componente, 
+                                        basándose en el conocimiento del diseño interno o el estado del sistema, lo 
+                                        considerarías parte del desarrollo como una táctica:
+                                    </p>
+                                    <div class="ContOpc">
+                                        <input type="radio" class="OpcDisp" name="Disp5" id="Dis5Primordial" value="5" required>
+                                        <label for="Dis5Primordial">Primordial</label>
+                                        <input type="radio" class="OpcDisp" name="Disp5" id="Dis5Preferible" value="3">
+                                        <label for="Dis5Preferible">Preferible</label>
+                                        <input type="radio" class="OpcDisp" name="Disp5" id="Dis5Complementaria" value="1">
+                                        <label for="Dis5Complementaria">Complementaria</label>
+                                    </div>
+                                </div>
+                                <div class="Pregunta">
+                                    <p>
+                                        Gestionar las situaciones excepcionales detectadas 
+                                        en el sistema, enmascarando la falla, corrigiendo la 
+                                        causa y recuperando la operación al intentar nuevamente, 
+                                        lo considerarías parte del desarrollo como una táctica:
+                                    </p>
+                                    <div class="ContOpc">
+                                        <input type="radio" class="OpcDisp" name="Disp6" id="Dis6Primordial" value="5" required>
+                                        <label for="Dis6Primordial">Primordial</label>
+                                        <input type="radio" class="OpcDisp" name="Disp6" id="Dis6Preferible" value="3">
+                                        <label for="Dis6Preferible">Preferible</label>
+                                        <input type="radio" class="OpcDisp" name="Disp6" id="Dis6Complementaria" value="1">
+                                        <label for="Dis6Complementaria">Complementaria</label>
+                                    </div>
+                                </div>
+                                <div class="Pregunta">
+                                    <p>
+                                        Realizar actualizaciones de hardware para mejorar el 
+                                        rendimiento, aumentar la capacidad o agregar nuevas 
+                                        funcionalidades al sistema, asegurando compatibilidad 
+                                        con los componentes existentes, lo considerarías parte 
+                                        del desarrollo como una táctica:
+                                    </p>
+                                    <div class="ContOpc">
+                                        <input type="radio" class="OpcDisp" name="Disp7" id="Dis7Primordial" value="5" required>
+                                        <label for="Dis7Primordial">Primordial</label>
+                                        <input type="radio" class="OpcDisp" name="Disp7" id="Dis7Preferible" value="3">
+                                        <label for="Dis7Preferible">Preferible</label>
+                                        <input type="radio" class="OpcDisp" name="Disp7" id="Dis7Complementaria" value="1">
+                                        <label for="Dis7Complementaria">Complementaria</label>
+                                    </div>
+                                </div>
+                                <div class="Pregunta">
+                                    <p>
+                                        Alcanzar objetivos mediante ejecuciones que no afecten 
+                                        la totalidad del software, utilizando un enfoque que 
+                                        agregue nuevas funcionalidades y capacidades sin interrupciones, 
+                                        lo considerarías parte del desarrollo como una táctica:
+                                    </p>
+                                    <div class="ContOpc">
+                                        <input type="radio" class="OpcDisp" name="Disp8" id="Dis8Primordial" value="5" required>
+                                        <label for="Dis8Primordial">Primordial</label>
+                                        <input type="radio" class="OpcDisp" name="Disp8" id="Dis8Preferible" value="3">
+                                        <label for="Dis8Preferible">Preferible</label>
+                                        <input type="radio" class="OpcDisp" name="Disp8" id="Dis8Complementaria" value="1">
+                                        <label for="Dis8Complementaria">Complementaria</label>
+                                    </div>
+                                </div>
+                                <div class="Pregunta">
+                                    <p>
+                                        Recuperar el sistema desde fallas en componentes reasignando 
+                                        responsabilidades a los componentes funcionales, en la medida 
+                                        de lo posible para mantener la funcionalidad, lo considerarías 
+                                        parte del desarrollo como una táctica:
+                                    </p>
+                                    <div class="ContOpc">
+                                        <input type="radio" class="OpcDisp" name="Disp9" id="Dis9Primordial" value="5" required>
+                                        <label for="Dis9Primordial">Primordial</label>
+                                        <input type="radio" class="OpcDisp" name="Disp9" id="Dis9Preferible" value="3">
+                                        <label for="Dis9Preferible">Preferible</label>
+                                        <input type="radio" class="OpcDisp" name="Disp9" id="Dis9Complementaria" value="1">
+                                        <label for="Dis9Complementaria">Complementaria</label>
+                                    </div>
+                                </div>
+                                <div class="Pregunta">
+                                    <p>
+                                        Permitir que el sistema se recupere de fallas variando la 
+                                        granularidad de los componentes que se reinician y minimizando el 
+                                        impacto en el nivel de servicio, lo considerarías parte del 
+                                        desarrollo como una táctica:
+                                    </p>
+                                    <div class="ContOpc">
+                                        <input type="radio" class="OpcDisp" name="Disp10" id="Dis10Primordial" value="5" required>
+                                        <label for="Dis10Primordial">Primordial</label>
+                                        <input type="radio" class="OpcDisp" name="Disp10" id="Dis10Preferible" value="3">
+                                        <label for="Dis10Preferible">Preferible</label>
+                                        <input type="radio" class="OpcDisp" name="Disp10" id="Dis10Complementaria" value="1">
+                                        <label for="Dis10Complementaria">Complementaria</label>
+                                    </div>
+                                </div>
+                                <div class="Pregunta">
+                                    <p>
+                                        Poner un componente temporalmente fuera de servicio para mitigar los 
+                                        efectos mientras se corrigen sus errores, lo considerarías parte del 
+                                        desarrollo como una táctica:
+                                    </p>
+                                    <div class="ContOpc">
+                                        <input type="radio" class="OpcDisp" name="Disp11" id="Dis11Primordial" value="5" required>
+                                        <label for="Dis11Primordial">Primordial</label>
+                                        <input type="radio" class="OpcDisp" name="Disp11" id="Dis11Preferible" value="3">
+                                        <label for="Dis11Preferible">Preferible</label>
+                                        <input type="radio" class="OpcDisp" name="Disp11" id="Dis11Complementaria" value="1">
+                                        <label for="Dis11Complementaria">Complementaria</label>
+                                    </div>
+                                </div>
+                                <div class="Pregunta">
+                                    <p>
+                                        Combinar un modelo predictivo con un sistema de monitoreo para verificar 
+                                        el estado de salud del sistema, asegurando que opere dentro de parámetros 
+                                        saludables de funcionamiento, lo considerarías parte del desarrollo como 
+                                        una táctica:
+                                    </p>
+                                    <div class="ContOpc">
+                                        <input type="radio" class="OpcDisp" name="Disp12" id="Dis12Primordial" value="5" required>
+                                        <label for="Dis12Primordial">Primordial</label>
+                                        <input type="radio" class="OpcDisp" name="Disp12" id="Dis12Preferible" value="3">
+                                        <label for="Dis12Preferible">Preferible</label>
+                                        <input type="radio" class="OpcDisp" name="Disp12" id="Dis12Complementaria" value="1">
+                                        <label for="Dis12Complementaria">Complementaria</label>
+                                    </div>
+                                </div>
+                                <div class="Pregunta">
+                                    <p>
+                                        Mantener suficiente información para permitir la ejecución de Undo, de 
+                                        modo que el sistema pueda regresar al estado anterior y restaurarlo, lo 
+                                        considerarías parte del desarrollo como una táctica: 
+                                    </p>
+                                    <div class="ContOpc">
+                                        <input type="radio" class="OpcUsab" name="Usab1" id="Usa1Primordial" value="5" required>
+                                        <label for="Usa1Primordial">Primordial</label>
+                                        <input type="radio" class="OpcUsab" name="Usab1" id="Usa1Preferible" value="3">
+                                        <label for="Usa1Preferible">Preferible</label>
+                                        <input type="radio" class="OpcUsab" name="Usab1" id="Usa1Complementaria" value="1">
+                                        <label for="Usa1Complementaria">Complementaria</label>
+                                    </div>
+                                </div>
+                                <div class="Pregunta">
+                                    <p>
+                                        Proporcionar una opción de pausa y reanudación para tareas largas, 
+                                        optimizando los recursos en el proceso, lo considerarías parte del 
+                                        desarrollo como una táctica: 
+                                    </p>
+                                    <div class="ContOpc">
+                                        <input type="radio" class="OpcUsab" name="Usab2" id="Usa2Primordial" value="5" required>
+                                        <label for="Usa2Primordial">Primordial</label>
+                                        <input type="radio" class="OpcUsab" name="Usab2" id="Usa2Preferible" value="3">
+                                        <label for="Usa2Preferible">Preferible</label>
+                                        <input type="radio" class="OpcUsab" name="Usab2" id="Usa2Complementaria" value="1">
+                                        <label for="Usa2Complementaria">Complementaria</label>
+                                    </div>
+                                </div>
+                                <div class="Pregunta">
+                                    <p>
+                                        Permitir que el sistema realice operaciones en bloque o aplique 
+                                        acciones a múltiples elementos, lo considerarías parte del desarrollo 
+                                        como una táctica:
+                                    </p>
+                                    <div class="ContOpc">
+                                        <input type="radio" class="OpcUsab" name="Usab3" id="Usa3Primordial" value="5" required>
+                                        <label for="Usa3Primordial">Primordial</label>
+                                        <input type="radio" class="OpcUsab" name="Usab3" id="Usa3Preferible" value="3">
+                                        <label for="Usa3Preferible">Preferible</label>
+                                        <input type="radio" class="OpcUsab" name="Usab3" id="Usa3Complementaria" value="1">
+                                        <label for="Usa3Complementaria">Complementaria</label>
+                                    </div>
+                                </div>
+                                <div class="Pregunta">
+                                    <p>
+                                        Mantener un modelo de tarea que determine el contexto para que el 
+                                        sistema actúe adecuadamente, lo considerarías parte del desarrollo como 
+                                        una táctica:
+                                    </p>
+                                    <div class="ContOpc">
+                                        <input type="radio" class="OpcUsab" name="Usab4" id="Usa4Primordial" value="5" required>
+                                        <label for="Usa4Primordial">Primordial</label>
+                                        <input type="radio" class="OpcUsab" name="Usab4" id="Usa4Preferible" value="3">
+                                        <label for="Usa4Preferible">Preferible</label>
+                                        <input type="radio" class="OpcUsab" name="Usab4" id="Usa4Complementaria" value="1">
+                                        <label for="Usa4Complementaria">Complementaria</label>
+                                    </div>
+                                </div>
+                                <div class="Pregunta">
+                                    <p>
+                                        Mantener un modelo explícito del conocimiento que el usuario tiene del 
+                                        sistema y su conducta, para planear retroalimentación o sugerencias 
+                                        personalizadas, lo considerarías parte del desarrollo como una táctica:
+                                    </p>
+                                    <div class="ContOpc">
+                                        <input type="radio" class="OpcUsab" name="Usab5" id="Usa5Primordial" value="5" required>
+                                        <label for="Usa5Primordial">Primordial</label>
+                                        <input type="radio" class="OpcUsab" name="Usab5" id="Usa5Preferible" value="3">
+                                        <label for="Usa5Preferible">Preferible</label>
+                                        <input type="radio" class="OpcUsab" name="Usab5" id="Usa5Complementaria" value="1">
+                                        <label for="Usa5Complementaria">Complementaria</label>
+                                    </div>
+                                </div>
+                                <div class="Pregunta">
+                                    <p>
+                                        Mantener un modelo explícito del sistema para predecir el tiempo de 
+                                        finalización de una tarea y proporcionar retroalimentación o sugerencias 
+                                        al usuario en caso contrario, lo considerarías parte del desarrollo como 
+                                        una táctica:
+                                    </p>
+                                    <div class="ContOpc">
+                                        <input type="radio" class="OpcUsab" name="Usab6" id="Usa6Primordial" value="5" required>
+                                        <label for="Usa6Primordial">Primordial</label>
+                                        <input type="radio" class="OpcUsab" name="Usab6" id="Usa6Preferible" value="3">
+                                        <label for="Usa6Preferible">Preferible</label>
+                                        <input type="radio" class="OpcUsab" name="Usab6" id="Usa6Complementaria" value="1">
+                                        <label for="Usa6Complementaria">Complementaria</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+232872
+JUAN FRANCISCO GALLO RAMIREZ
+Ciencias Básicas
+Ing. en Computación Inteligente
+=============================
+254613
+LUIS MANUEL FLORES GARCIA
+Ciencias Básicas
+Ing. Industrial Estadístico
+=============================
+360144
+LUIS PABLO ESPARZA TERRONES
+Ciencias Económicas y Administrativas
+Lic. en Comercio Internacional
+=============================
+152422
+ADRIAN DE JESUS FRAUSTO PEREZ
+Ciencias de la Salud
+Lic. en Terapia Física
+=============================
+280651
+JUAN PABLO REYNA FRANCO
+Ciencias de la Salud
+Médico Cirujano
+=============================
+120551
+ANDRES MANUEL LOPEZ
+Artes y la Cultura
+Lic. en Música
+=============================

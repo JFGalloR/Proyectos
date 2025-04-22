@@ -1,0 +1,12 @@
+Nombre: ADRIAN
+Ciudad: LA CHONA
+Edad: 60
+Género: M
+Descripción: DOLOR DE CABEZA, MALESTAR GENERAL
+----------------------------------
+Nombre: JUAN
+Ciudad: AGS
+Edad: 18
+Género: M
+Descripción: MALESTAR
+----------------------------------

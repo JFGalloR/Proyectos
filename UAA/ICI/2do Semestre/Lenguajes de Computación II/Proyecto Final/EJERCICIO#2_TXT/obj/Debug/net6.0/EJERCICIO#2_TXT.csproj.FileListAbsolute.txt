@@ -1,0 +1,15 @@
+C:\Users\xxjfg\Desktop\EJERCICIO#2_TXT\bin\Debug\net6.0\EJERCICIO#2_TXT.exe
+C:\Users\xxjfg\Desktop\EJERCICIO#2_TXT\bin\Debug\net6.0\EJERCICIO#2_TXT.deps.json
+C:\Users\xxjfg\Desktop\EJERCICIO#2_TXT\bin\Debug\net6.0\EJERCICIO#2_TXT.runtimeconfig.json
+C:\Users\xxjfg\Desktop\EJERCICIO#2_TXT\bin\Debug\net6.0\EJERCICIO#2_TXT.dll
+C:\Users\xxjfg\Desktop\EJERCICIO#2_TXT\bin\Debug\net6.0\EJERCICIO#2_TXT.pdb
+C:\Users\xxjfg\Desktop\EJERCICIO#2_TXT\obj\Debug\net6.0\EJERCICIO#2_TXT.csproj.AssemblyReference.cache
+C:\Users\xxjfg\Desktop\EJERCICIO#2_TXT\obj\Debug\net6.0\EJERCICIO#2_TXT.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\xxjfg\Desktop\EJERCICIO#2_TXT\obj\Debug\net6.0\EJERCICIO#2_TXT.AssemblyInfoInputs.cache
+C:\Users\xxjfg\Desktop\EJERCICIO#2_TXT\obj\Debug\net6.0\EJERCICIO#2_TXT.AssemblyInfo.cs
+C:\Users\xxjfg\Desktop\EJERCICIO#2_TXT\obj\Debug\net6.0\EJERCICIO#2_TXT.csproj.CoreCompileInputs.cache
+C:\Users\xxjfg\Desktop\EJERCICIO#2_TXT\obj\Debug\net6.0\EJERCICIO#2_TXT.dll
+C:\Users\xxjfg\Desktop\EJERCICIO#2_TXT\obj\Debug\net6.0\refint\EJERCICIO#2_TXT.dll
+C:\Users\xxjfg\Desktop\EJERCICIO#2_TXT\obj\Debug\net6.0\EJERCICIO#2_TXT.pdb
+C:\Users\xxjfg\Desktop\EJERCICIO#2_TXT\obj\Debug\net6.0\EJERCICIO#2_TXT.genruntimeconfig.cache
+C:\Users\xxjfg\Desktop\EJERCICIO#2_TXT\obj\Debug\net6.0\ref\EJERCICIO#2_TXT.dll

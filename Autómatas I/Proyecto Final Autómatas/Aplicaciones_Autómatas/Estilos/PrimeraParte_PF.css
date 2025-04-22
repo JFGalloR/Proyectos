@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.3s;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../Recursos/Fondo_GeoLocator.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header h1 {
+    font-size: 9vh;
+    font-weight: 800;
+    padding: 5vh 0 0 10vh;
+    margin: 0;
+    text-shadow: 0 0 100px #219fff;
+}
+
+header h1 :nth-child(1) {
+    color: #1b53a8;
+}
+
+header h1 :nth-child(2) {
+    color: #b8972c;
+}
+
+header h2 {
+    font-size: 3vh;
+    font-weight: 800;
+    padding: 0 0 5.5vh 22.7vh;
+    margin: 0;
+    text-shadow: 0 0 100px #219fff;
+}
+
+header h2 :nth-child(1) {
+    background-color: #d0a827;
+    border: 2px solid;
+    border-right: none;
+    border-radius: 1vh 0 0 1vh;
+    color: #1b53a8;
+    padding: 0 0.5vh 0 1.5vh;
+}
+
+header h2 :nth-child(2) {
+    background-color: #1b53a8;
+    border: 2px solid;
+    border-left: none;
+    border-radius: 0 1vh 1vh 0;
+    color: #b8972c;
+    padding: 0 1.5vh 0 0.5vh;
+}
+
+main {
+    flex: 1;
+    padding: 0 3em 3em 3em;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 3em;
+}
+
+.Inputs {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-60deg, #ffc40030, #42000030);
+    border: 1px solid #b8972c;
+    border-radius: 1.3em;
+    box-shadow: 20px 20px 100px #ffc4008b,
+                -20px -20px 100px #0066ff8b;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ContInputs {
+    width: calc(100% - 7vh);
+    background: linear-gradient(-60deg, #ffc40053, #ffffff53);
+    border: 1px solid #b8972c;
+    border-radius: 0.8em;
+    margin: 3.5vh;
+    padding: 4vh;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    color: #332a0a;
+    border-radius: 0.8vh;
+    padding: 0 1vh;
+    font-size: 2.8vh;
+    font-weight: 400;
+}
+
+input {
+    background-color: #ffffff74;
+    outline: none;
+    border: 1px solid #b8972c;
+    border-radius: 0.8vh;;
+    font-size: 3.5vh;
+    font-weight: 400;
+    padding: 1vh;
+    margin: 1vh 0;
+    text-align: center;
+    box-shadow: 0 0 20px #00000060;
+}
+
+input::placeholder {
+    color: #a89c70;
+}
+
+input:focus {
+    background-color: #f0e1aeaf;
+    border: 1px solid #b8972c;
+    font-weight: 700;
+    box-shadow: 0 0 20px #ffc4008b;
+}
+
+#ErrorLat, #ErrorLon {
+    margin: 0 0 0.8vh 0;
+    font-size: 1.5vh;
+    color: #880909;
+    display: none;
+}
+
+.Invalido {
+    border: 1px solid #b82c2c;
+    font-weight: 700;
+    box-shadow: 0 0 20px #ff00008b;
+}
+
+button {
+    width: 40%;
+    background-color: #a39e8e;
+    border: 2px solid #71716e;
+    border-radius: 1vh;
+    padding: 0.5vh;
+    margin: 5vh;
+    color: #71716e;
+    font-size: 3vh;
+    font-weight: 700;
+}
+
+button:enabled {
+    width: 40%;
+    background-color: #fae396;
+    border: 2px solid #886e16;
+    border-radius: 1vh;
+    padding: 0.5vh;
+    margin: 5vh;
+    color: #886e16;
+    font-size: 3vh;
+    font-weight: 700;
+    box-shadow: 0 5px 8px #0000008b;
+}
+
+button:enabled:hover {
+    width: 40%;
+    background-color: #1b53a8;
+    border: 2px solid #c5daf8;
+    border-radius: 1vh;
+    padding: 0.5vh;
+    margin: 5vh;
+    color: #c5daf8;
+    font-size: 3vh;
+    font-weight: 900;
+    transform: translateY(-5px);
+    box-shadow: 10px 10px 30px #ffc4008b,
+                -10px -10px 30px #0066ffbd;
+}
+
+.Mapa {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #1e6bc3;
+    border-radius: 1.3em;
+    box-shadow: 0 0 100px #ffffff8b;
+    overflow: hidden;
+}
+
+#Mapa {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.InitMapa {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-60deg, #00000053, #146caa53);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.InitMapa h3 {
+    color: #bbd8f8;
+    font-size: 5vh;
+    font-weight: 300;
+    margin: 0;
+}
+
+.InitMapa span {
+    color: #bbd8f8;
+    font-size: 22vh;
+}
+
+footer {
+    background: linear-gradient(#0f0f0f, #000000);
+    color: #ffffff;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0px 0px 100px #ffffff;
+}
+
+footer p {
+    margin: 0;
+    text-align: center;
+}
+
+footer :nth-child(1) {
+    color: #ffffff;
+    font-size: 1.5vh;
+    font-weight: 800;
+    margin: 0;
+}
+
+footer :nth-child(2) {
+    color: #c9c9c9;
+    font-size: 1.4vh;
+    font-weight: 600;
+    margin: 3px 0 8px 0;
+}
+
+footer :nth-child(3) {
+    color: #6f6f6f;
+    font-size: 1.3vh;
+    font-weight: 300;
+    line-height: 0.8;
+    margin: 0;
+}
+
+footer :nth-child(4) {
+    color: #6f6f6f;
+    font-size: 1.3vh;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 0.9;
+    margin: 0;
+}

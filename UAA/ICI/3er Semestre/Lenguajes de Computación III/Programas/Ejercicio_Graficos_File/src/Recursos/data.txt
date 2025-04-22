@@ -1,0 +1,10 @@
+Lenguaje más usado,¿Cúal lenguaje es el más utilizado?
+Phyton,220000
+Java,180000
+JavaScript,130000
+C++,95000
+C,60000
+TypeScript,55000
+PHP,53000
+Perl,50000
+Ruby,45000

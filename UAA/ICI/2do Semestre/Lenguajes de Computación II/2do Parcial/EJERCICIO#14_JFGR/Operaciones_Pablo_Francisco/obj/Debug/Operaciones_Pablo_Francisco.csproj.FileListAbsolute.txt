@@ -1,0 +1,8 @@
+C:\Users\pespa\OneDrive\Documentos\UAA\2do Semestre\Lenguajes de Computación\ROSALINDA\C# Segundo Parcial\Operaciones_Pablo_Francisco\Operaciones_Pablo_Francisco\bin\Debug\Operaciones_Pablo_Francisco.exe.config
+C:\Users\pespa\OneDrive\Documentos\UAA\2do Semestre\Lenguajes de Computación\ROSALINDA\C# Segundo Parcial\Operaciones_Pablo_Francisco\Operaciones_Pablo_Francisco\bin\Debug\Operaciones_Pablo_Francisco.exe
+C:\Users\pespa\OneDrive\Documentos\UAA\2do Semestre\Lenguajes de Computación\ROSALINDA\C# Segundo Parcial\Operaciones_Pablo_Francisco\Operaciones_Pablo_Francisco\bin\Debug\Operaciones_Pablo_Francisco.pdb
+C:\Users\pespa\OneDrive\Documentos\UAA\2do Semestre\Lenguajes de Computación\ROSALINDA\C# Segundo Parcial\Operaciones_Pablo_Francisco\Operaciones_Pablo_Francisco\obj\Debug\Operaciones_Pablo_Francisco.csproj.AssemblyReference.cache
+C:\Users\pespa\OneDrive\Documentos\UAA\2do Semestre\Lenguajes de Computación\ROSALINDA\C# Segundo Parcial\Operaciones_Pablo_Francisco\Operaciones_Pablo_Francisco\obj\Debug\Operaciones_Pablo_Francisco.csproj.SuggestedBindingRedirects.cache
+C:\Users\pespa\OneDrive\Documentos\UAA\2do Semestre\Lenguajes de Computación\ROSALINDA\C# Segundo Parcial\Operaciones_Pablo_Francisco\Operaciones_Pablo_Francisco\obj\Debug\Operaciones_Pablo_Francisco.csproj.CoreCompileInputs.cache
+C:\Users\pespa\OneDrive\Documentos\UAA\2do Semestre\Lenguajes de Computación\ROSALINDA\C# Segundo Parcial\Operaciones_Pablo_Francisco\Operaciones_Pablo_Francisco\obj\Debug\Operaciones_Pablo_Francisco.exe
+C:\Users\pespa\OneDrive\Documentos\UAA\2do Semestre\Lenguajes de Computación\ROSALINDA\C# Segundo Parcial\Operaciones_Pablo_Francisco\Operaciones_Pablo_Francisco\obj\Debug\Operaciones_Pablo_Francisco.pdb

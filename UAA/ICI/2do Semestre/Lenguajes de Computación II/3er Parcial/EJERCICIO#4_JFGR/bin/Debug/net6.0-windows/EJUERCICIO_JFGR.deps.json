@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "EJUERCICIO_JFGR/1.0.0": {
+        "runtime": {
+          "EJUERCICIO_JFGR.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EJUERCICIO_JFGR/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

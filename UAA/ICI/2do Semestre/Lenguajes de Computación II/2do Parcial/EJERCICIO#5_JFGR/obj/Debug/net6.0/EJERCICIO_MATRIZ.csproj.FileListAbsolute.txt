@@ -1,0 +1,15 @@
+C:\Users\xxjfg\Desktop\EJERCICIO_MATRIZ\bin\Debug\net6.0\EJERCICIO_MATRIZ.exe
+C:\Users\xxjfg\Desktop\EJERCICIO_MATRIZ\bin\Debug\net6.0\EJERCICIO_MATRIZ.deps.json
+C:\Users\xxjfg\Desktop\EJERCICIO_MATRIZ\bin\Debug\net6.0\EJERCICIO_MATRIZ.runtimeconfig.json
+C:\Users\xxjfg\Desktop\EJERCICIO_MATRIZ\bin\Debug\net6.0\EJERCICIO_MATRIZ.dll
+C:\Users\xxjfg\Desktop\EJERCICIO_MATRIZ\bin\Debug\net6.0\EJERCICIO_MATRIZ.pdb
+C:\Users\xxjfg\Desktop\EJERCICIO_MATRIZ\obj\Debug\net6.0\EJERCICIO_MATRIZ.csproj.AssemblyReference.cache
+C:\Users\xxjfg\Desktop\EJERCICIO_MATRIZ\obj\Debug\net6.0\EJERCICIO_MATRIZ.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\xxjfg\Desktop\EJERCICIO_MATRIZ\obj\Debug\net6.0\EJERCICIO_MATRIZ.AssemblyInfoInputs.cache
+C:\Users\xxjfg\Desktop\EJERCICIO_MATRIZ\obj\Debug\net6.0\EJERCICIO_MATRIZ.AssemblyInfo.cs
+C:\Users\xxjfg\Desktop\EJERCICIO_MATRIZ\obj\Debug\net6.0\EJERCICIO_MATRIZ.csproj.CoreCompileInputs.cache
+C:\Users\xxjfg\Desktop\EJERCICIO_MATRIZ\obj\Debug\net6.0\EJERCICIO_MATRIZ.dll
+C:\Users\xxjfg\Desktop\EJERCICIO_MATRIZ\obj\Debug\net6.0\refint\EJERCICIO_MATRIZ.dll
+C:\Users\xxjfg\Desktop\EJERCICIO_MATRIZ\obj\Debug\net6.0\EJERCICIO_MATRIZ.pdb
+C:\Users\xxjfg\Desktop\EJERCICIO_MATRIZ\obj\Debug\net6.0\EJERCICIO_MATRIZ.genruntimeconfig.cache
+C:\Users\xxjfg\Desktop\EJERCICIO_MATRIZ\obj\Debug\net6.0\ref\EJERCICIO_MATRIZ.dll

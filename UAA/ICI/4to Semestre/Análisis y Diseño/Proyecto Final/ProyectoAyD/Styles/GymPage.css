@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: 'Kanit', sans-serif;
+    box-sizing: border-box;
+    transition: all 0.2s;
+}
+
+body {
+    background: linear-gradient(170deg, #171717, #454545);
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    min-height: 500px;
+    min-width: 900px;
+}
+
+.NavBar {
+    width: 20vw;
+    height: 100%;
+    min-width: 310px;
+    padding: 1%;
+    display: grid;
+    grid-template-rows: 4fr 3fr 1fr;
+    gap: 2%;
+}
+
+.Members, .Finance {
+    background: linear-gradient(170deg, #171717, #454545);
+    border: solid 1px #4d4d4d;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #000000;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 1fr 8fr;
+}
+
+.Members h2, .Finance h2 {
+    color: #9b9b9b;
+    margin: 10px 20px 0 20px;
+    font-size: 2.5vh;
+    font-weight: 500;
+}
+
+.Btns {
+    background-color: #383838;
+    border: solid 1px #4d4d4d;
+    border-radius: 10px;
+    margin: 8px;
+    padding: 9px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 9px;
+}
+
+.Btns button {
+    cursor: pointer;
+    background: linear-gradient(170deg, #9b9b9b, #5e5e5e);
+    border: solid 1px #7f7f7f;
+    border-radius: 8px;
+    font-size: 1.7vh;
+    line-height: 0.9;
+    padding: 1.5vh;
+    box-shadow: 0 0 10px #0000006f;
+}
+
+.Btns button:hover {
+    background: linear-gradient(170deg, #e2e2e2, #656565);
+    border: solid 1px #c7c7c7;
+    color: #ffffff;
+    transform: translateY(-2px);
+
+}
+
+
+#Esc {
+    background: linear-gradient(170deg, #ffe7a0, #ba8d07);
+    color: #000000;
+    border: solid 1px #ffeaab;
+    grid-column: span 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.7vh;
+    text-align: left;
+}
+
+#Esc span{
+    margin-right: 1.2vh;
+}
+
+#Esc:hover {
+    background: linear-gradient(170deg, #ffe7a0, #ba8d07);
+    color: #ffffff;
+    border: solid 1px #ffeaab;
+}
+
+#Sell {
+    background: linear-gradient(170deg, #b3ffae, #0e5b09);
+    color: #000000;
+    border: solid 1px #77d171;
+}
+
+#Sell:hover {
+    background: linear-gradient(170deg, #b3ffae, #0e5b09);
+    color: #ffffff;
+    border: solid 1px #77d171;
+}
+
+.Btns button span {
+    font-size: 3em;
+    display: block;
+}
+
+.BtnsAux {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 9px;
+}
+
+#Home, #Exit {
+    cursor: pointer;
+    background: linear-gradient(170deg, #3a3a3a, #111111);
+    width: 100%;
+    color: #7f7f7f;
+    border: solid 1px #7f7f7f;
+    border-radius: 8px;
+    font-size: 2vh;
+    line-height: 0.9;
+    padding: 1.5vh;
+    box-shadow: 0 0 10px #0000006f;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#Home span, #Exit span {
+    font-size: 2em;
+}
+
+#Home:hover {
+    background: linear-gradient(170deg, #518fa6, #003a50);
+    border: solid 1px #8fc5d9;
+    color: #8fc5d9;
+    transform: translateY(-2px);
+}
+
+#Exit:hover {
+    background: linear-gradient(170deg, #a43232, #5b0000);
+    border: solid 1px #e39e9e;
+    color: #e39e9e;
+    transform: translateY(-2px);
+}
+
+.Section {
+    height: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.Section header{
+    margin: 1.2% 0 10px 0;
+    display: flex;
+}
+
+.Section header h1 {
+    background: linear-gradient(170deg, #9d2727, #650000);
+    border: solid 1px #b44141;
+    border-right: none;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 3.4vh;
+    padding: 0 0.5em;
+    border-radius: 15px 0 0 15px;
+    margin: 0;
+}
+
+.Section header h2 {
+    background: linear-gradient(170deg, #ffeeee, #f4caca);
+    border: solid 1px #b44141;
+    border-left: none;
+    color: #111111;
+    font-weight: 300;
+    font-size: 3.4vh;
+    padding: 0 0.5em;
+    border-radius: 0 15px 15px 0;
+    margin: 0;
+}
+
+iframe {
+    background-color: #ffffff;
+    border: solid 1px #767676;
+    height: 85%;
+    border-radius: 15px;
+    margin: 0 1vw 1vw 0;
+    flex: 1;
+    overflow: hidden;
+}
+
+
+@media (max-height: 500px) {
+
+    .Btns button {
+        padding: 0.5em;
+        font-size: 0.55em;
+    }
+
+    .Members h2, .Finance h2, #Esc {
+        font-size: 0.8em;
+    }
+
+    #Esc span{
+        margin-right: 0.1em;
+    }
+
+    #Home, #Exit {
+        font-size: 0.65em;
+    }
+
+    .Section header h1, .Section header h2 {
+        font-size: 1em;
+    }
+}

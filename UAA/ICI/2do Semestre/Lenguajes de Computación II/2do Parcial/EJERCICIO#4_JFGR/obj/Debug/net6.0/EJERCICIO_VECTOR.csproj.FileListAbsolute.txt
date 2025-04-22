@@ -1,0 +1,15 @@
+C:\Users\xxjfg\Desktop\EJERCICIO_VECTOR\obj\Debug\net6.0\EJERCICIO_VECTOR.csproj.AssemblyReference.cache
+C:\Users\xxjfg\Desktop\EJERCICIO_VECTOR\obj\Debug\net6.0\EJERCICIO_VECTOR.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\xxjfg\Desktop\EJERCICIO_VECTOR\obj\Debug\net6.0\EJERCICIO_VECTOR.AssemblyInfoInputs.cache
+C:\Users\xxjfg\Desktop\EJERCICIO_VECTOR\obj\Debug\net6.0\EJERCICIO_VECTOR.AssemblyInfo.cs
+C:\Users\xxjfg\Desktop\EJERCICIO_VECTOR\obj\Debug\net6.0\EJERCICIO_VECTOR.csproj.CoreCompileInputs.cache
+C:\Users\xxjfg\Desktop\EJERCICIO_VECTOR\bin\Debug\net6.0\EJERCICIO_VECTOR.exe
+C:\Users\xxjfg\Desktop\EJERCICIO_VECTOR\bin\Debug\net6.0\EJERCICIO_VECTOR.deps.json
+C:\Users\xxjfg\Desktop\EJERCICIO_VECTOR\bin\Debug\net6.0\EJERCICIO_VECTOR.runtimeconfig.json
+C:\Users\xxjfg\Desktop\EJERCICIO_VECTOR\bin\Debug\net6.0\EJERCICIO_VECTOR.dll
+C:\Users\xxjfg\Desktop\EJERCICIO_VECTOR\bin\Debug\net6.0\EJERCICIO_VECTOR.pdb
+C:\Users\xxjfg\Desktop\EJERCICIO_VECTOR\obj\Debug\net6.0\EJERCICIO_VECTOR.dll
+C:\Users\xxjfg\Desktop\EJERCICIO_VECTOR\obj\Debug\net6.0\refint\EJERCICIO_VECTOR.dll
+C:\Users\xxjfg\Desktop\EJERCICIO_VECTOR\obj\Debug\net6.0\EJERCICIO_VECTOR.pdb
+C:\Users\xxjfg\Desktop\EJERCICIO_VECTOR\obj\Debug\net6.0\EJERCICIO_VECTOR.genruntimeconfig.cache
+C:\Users\xxjfg\Desktop\EJERCICIO_VECTOR\obj\Debug\net6.0\ref\EJERCICIO_VECTOR.dll

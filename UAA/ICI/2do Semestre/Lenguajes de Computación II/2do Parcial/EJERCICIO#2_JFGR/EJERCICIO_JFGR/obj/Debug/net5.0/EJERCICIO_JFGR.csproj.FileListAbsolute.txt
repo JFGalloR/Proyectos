@@ -1,0 +1,16 @@
+C:\Users\ICI\Desktop\EJERCICIO_JFGR\EJERCICIO_JFGR\bin\Debug\net5.0\EJERCICIO_JFGR.exe
+C:\Users\ICI\Desktop\EJERCICIO_JFGR\EJERCICIO_JFGR\bin\Debug\net5.0\EJERCICIO_JFGR.deps.json
+C:\Users\ICI\Desktop\EJERCICIO_JFGR\EJERCICIO_JFGR\bin\Debug\net5.0\EJERCICIO_JFGR.runtimeconfig.json
+C:\Users\ICI\Desktop\EJERCICIO_JFGR\EJERCICIO_JFGR\bin\Debug\net5.0\EJERCICIO_JFGR.runtimeconfig.dev.json
+C:\Users\ICI\Desktop\EJERCICIO_JFGR\EJERCICIO_JFGR\bin\Debug\net5.0\EJERCICIO_JFGR.dll
+C:\Users\ICI\Desktop\EJERCICIO_JFGR\EJERCICIO_JFGR\bin\Debug\net5.0\ref\EJERCICIO_JFGR.dll
+C:\Users\ICI\Desktop\EJERCICIO_JFGR\EJERCICIO_JFGR\bin\Debug\net5.0\EJERCICIO_JFGR.pdb
+C:\Users\ICI\Desktop\EJERCICIO_JFGR\EJERCICIO_JFGR\obj\Debug\net5.0\EJERCICIO_JFGR.csproj.AssemblyReference.cache
+C:\Users\ICI\Desktop\EJERCICIO_JFGR\EJERCICIO_JFGR\obj\Debug\net5.0\EJERCICIO_JFGR.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ICI\Desktop\EJERCICIO_JFGR\EJERCICIO_JFGR\obj\Debug\net5.0\EJERCICIO_JFGR.AssemblyInfoInputs.cache
+C:\Users\ICI\Desktop\EJERCICIO_JFGR\EJERCICIO_JFGR\obj\Debug\net5.0\EJERCICIO_JFGR.AssemblyInfo.cs
+C:\Users\ICI\Desktop\EJERCICIO_JFGR\EJERCICIO_JFGR\obj\Debug\net5.0\EJERCICIO_JFGR.csproj.CoreCompileInputs.cache
+C:\Users\ICI\Desktop\EJERCICIO_JFGR\EJERCICIO_JFGR\obj\Debug\net5.0\EJERCICIO_JFGR.dll
+C:\Users\ICI\Desktop\EJERCICIO_JFGR\EJERCICIO_JFGR\obj\Debug\net5.0\ref\EJERCICIO_JFGR.dll
+C:\Users\ICI\Desktop\EJERCICIO_JFGR\EJERCICIO_JFGR\obj\Debug\net5.0\EJERCICIO_JFGR.pdb
+C:\Users\ICI\Desktop\EJERCICIO_JFGR\EJERCICIO_JFGR\obj\Debug\net5.0\EJERCICIO_JFGR.genruntimeconfig.cache

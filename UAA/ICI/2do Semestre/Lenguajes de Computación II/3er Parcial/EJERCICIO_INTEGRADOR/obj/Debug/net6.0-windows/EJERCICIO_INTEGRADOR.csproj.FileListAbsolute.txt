@@ -1,0 +1,17 @@
+C:\Users\xxjfg\Desktop\EJERCICIO_INTEGRADOR\bin\Debug\net6.0-windows\EJERCICIO_INTEGRADOR.exe
+C:\Users\xxjfg\Desktop\EJERCICIO_INTEGRADOR\bin\Debug\net6.0-windows\EJERCICIO_INTEGRADOR.deps.json
+C:\Users\xxjfg\Desktop\EJERCICIO_INTEGRADOR\bin\Debug\net6.0-windows\EJERCICIO_INTEGRADOR.runtimeconfig.json
+C:\Users\xxjfg\Desktop\EJERCICIO_INTEGRADOR\bin\Debug\net6.0-windows\EJERCICIO_INTEGRADOR.dll
+C:\Users\xxjfg\Desktop\EJERCICIO_INTEGRADOR\bin\Debug\net6.0-windows\EJERCICIO_INTEGRADOR.pdb
+C:\Users\xxjfg\Desktop\EJERCICIO_INTEGRADOR\obj\Debug\net6.0-windows\EJERCICIO_INTEGRADOR.csproj.AssemblyReference.cache
+C:\Users\xxjfg\Desktop\EJERCICIO_INTEGRADOR\obj\Debug\net6.0-windows\EJERCICIO_INTEGRADOR.Form1.resources
+C:\Users\xxjfg\Desktop\EJERCICIO_INTEGRADOR\obj\Debug\net6.0-windows\EJERCICIO_INTEGRADOR.csproj.GenerateResource.cache
+C:\Users\xxjfg\Desktop\EJERCICIO_INTEGRADOR\obj\Debug\net6.0-windows\EJERCICIO_INTEGRADOR.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\xxjfg\Desktop\EJERCICIO_INTEGRADOR\obj\Debug\net6.0-windows\EJERCICIO_INTEGRADOR.AssemblyInfoInputs.cache
+C:\Users\xxjfg\Desktop\EJERCICIO_INTEGRADOR\obj\Debug\net6.0-windows\EJERCICIO_INTEGRADOR.AssemblyInfo.cs
+C:\Users\xxjfg\Desktop\EJERCICIO_INTEGRADOR\obj\Debug\net6.0-windows\EJERCICIO_INTEGRADOR.csproj.CoreCompileInputs.cache
+C:\Users\xxjfg\Desktop\EJERCICIO_INTEGRADOR\obj\Debug\net6.0-windows\EJERCICIO_INTEGRADOR.dll
+C:\Users\xxjfg\Desktop\EJERCICIO_INTEGRADOR\obj\Debug\net6.0-windows\refint\EJERCICIO_INTEGRADOR.dll
+C:\Users\xxjfg\Desktop\EJERCICIO_INTEGRADOR\obj\Debug\net6.0-windows\EJERCICIO_INTEGRADOR.pdb
+C:\Users\xxjfg\Desktop\EJERCICIO_INTEGRADOR\obj\Debug\net6.0-windows\EJERCICIO_INTEGRADOR.genruntimeconfig.cache
+C:\Users\xxjfg\Desktop\EJERCICIO_INTEGRADOR\obj\Debug\net6.0-windows\ref\EJERCICIO_INTEGRADOR.dll

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33414.496
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EJERCICIO_INTEGRADOR", "EJERCICIO_INTEGRADOR.csproj", "{36E833C1-5873-4198-8B5D-957B4242D320}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución", "Elementos de la solución", "{46B7858E-17FD-476F-953A-AE8EF1AB31DC}"
+	ProjectSection(SolutionItems) = preProject
+		Empleado.cs = Empleado.cs
+		Nomina.cs = Nomina.cs
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{36E833C1-5873-4198-8B5D-957B4242D320}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36E833C1-5873-4198-8B5D-957B4242D320}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36E833C1-5873-4198-8B5D-957B4242D320}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36E833C1-5873-4198-8B5D-957B4242D320}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E0016C80-6B50-40E6-BDE7-A32DB3DD17F8}
+	EndGlobalSection
+EndGlobal

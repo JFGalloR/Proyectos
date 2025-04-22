@@ -1,0 +1,6 @@
+José,Sanchez,López,28,2,1986
+María,López,Ramírez,8,4,1988
+Lucía,Martínez,López,2,3,1987
+Mara,Basurto,Salas,13,12,1980
+Luis,Hidalgo,Lara,16,4,1990
+Juan,Gallo,Ramírez,3,9,2004

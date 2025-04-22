@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Styles/ScanMemberPage.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/es.min.js"></script></head>
+    <script>moment.locale('es');</script>
+<body>
+
+    <div class="Scanner">
+        <h2>Ingresa el código de membresía:</h2>
+        <form method="POST" id="Search">
+            <label for="Code">#</label>
+            <input id="Code" name="Code" type="number" placeholder=" - - -" autofocus required>
+            <button type="submit" id="GetMem">Obtener Datos</button>
+        </form>
+    </div>
+
+    <div class="Init">
+        <div>
+            <span class="material-symbols-outlined">account_circle</span>
+            <h1>Escanea una membresía<br>o introduce su código<br>de miembro...</h1>
+        </div>
+    </div>
+
+    <div class="Member">
+
+        <div class="Data">
+            <h2 id="Name"> - - - </h2>
+            <h2 id="Membership"># - - - </h2>
+            <h2 class="SubTitle">Miembro desde:</h2>
+            <h2 id="Since"> - - - </h2>
+        </div>
+
+        <div class="ManageMem">
+
+            <div class="Green" id="Validation">
+
+                <div class="Icon">
+                    <span class="material-symbols-outlined" id="Passed">check_circle</span>
+                    <span class="material-symbols-outlined" id="Warning">error</span>
+                    <span class="material-symbols-outlined" id="NoPassed">warning</span>    
+                </div>
+
+                <div>
+                    <h2 class="GreenTit" id="ValText"> - - - </h2>
+                    <h2 class="ValInfo">
+                        <h3 id="ValSubText"> - - - </h3>
+                        <h3 id="ValDate"> - - - </h3>
+                    </h2>
+                </div>
+            </div>
+
+            <div id="AddMonths">
+
+                <h2>Agregar meses a membresía:</h2>
+                
+                <form action="">
+                    <div>
+                        <input type="number" name="Months" id="Months" placeholder="- -" required min="1"><label for="Months">Mes(es)</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="Pay" id="Cash" value="Efectivo" checked><label for="Efec">Efectivo</label>
+                        <input type="radio" name="Pay" id="Card" value="Transferencia"><label for="Transf">Transferencia</label>
+                    </div>
+                </form>
+
+                <div class="Payment">
+                    <h3>Total:</h3>
+                    <h4 class="Total">$<span class="Tot"> - - - </span></h4>
+                </div>
+
+                <button id="AddMon">Agregar</button>
+
+            </div>
+            
+        </div>
+
+        <button id="Cont"></button>
+
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#Search').on('submit', function(event) {
+                event.preventDefault();
+
+                var searchInput = $('#Code').val();
+
+                $.ajax({
+                    url: '../Scripts/Get_Member.php',
+                    type: 'POST',
+                    data: { searchInput: searchInput },
+                    success: function(response) {
+                        var data = JSON.parse(response);
+                        if(data.success) {
+                            $('#Passed').css({display: 'none'});
+                            $('#Warning').css({display: 'none'});
+                            $('#NoPassed').css({display: 'none'});
+                            $('#Validation').removeClass('Green').removeClass('Red').removeClass('Yellow');
+                            $('#ValText').removeClass('GreenTit').removeClass('RedTit').removeClass('YellowTit');
+
+
+                            $('#Name').text(data.Nombre + " " + data.Apellidos);
+                            $('#Membership').text('#' + data.Id);
+                            $('#Since').text(moment(data.Fecha_Ins).format('D [de] MMMM [de] YYYY'));
+                            $('#ValDate').text(moment(data.Fecha_Val).format('D [de] MMMM [de] YYYY'));
+                            
+                            let dif = (new Date(data.Fecha_Val).getTime() - new Date().getTime()) / (1000 * 3600 * 24);;
+                            if(dif >= 0) {
+                                if(dif < 3) {
+                                    $('#ValText').text("Pronto Vence");
+                                    $('#ValSubText').text("Vence el ");
+                                    $('#Validation').addClass('Yellow');
+                                    $('#Warning').css({display: 'inline-block'});
+                                    $('#ValText').addClass('YellowTit');
+                                } else {
+                                    $('#ValText').text("Membresía Válida");
+                                    $('#ValSubText').text("Válida hasta el ");
+                                    $('#Validation').addClass('Green');
+                                    $('#Passed').css({display: 'inline-block'});
+                                    $('#ValText').addClass('GreenTit');
+                                }
+                            }
+                            else {
+                                $('#ValText').text("Membresía No Válida");
+                                $('#ValSubText').text("Vencío el ");
+                                $('#Validation').addClass('Red');
+                                $('#NoPassed').css({display: 'inline-block'});
+                                $('#ValText').addClass('RedTit');
+                            }
+    
+                            $('.Init').css({display: 'none'});
+                            $('.Member').css({display: 'grid'});
+                        } else {
+                            alert('❌ No se encontraron resultados ❌');
+
+                            $('#Name').text('No se encontraron resultados');
+                            $('#Membership').text('# - - -');
+                            $('#Since').text(' - - - ');
+                            $('#ValDate').text(' - - - ');
+                            $('.Init').css({display: 'flex'});
+                            $('.Member').css({display: 'none'});
+
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Styles/HomePage.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+<body>
+
+    <div class="Date">
+        <span class="material-symbols-outlined">work_history</span>
+            <h3 id="Hour">00:00</h3>
+            <h4 id="Date">1 de Enero de 2000</h4>
+    </div>
+
+    <div class="StatsMembers">
+        <span class="material-symbols-outlined">groups</span>
+        <h3>Miembros registrados:</h3>
+        <h4 id="MemReg">0</h4>
+        <h3>Miembros ingresados hoy:</h3>
+        <h4 id="MemIn">0</h4>
+    </div>
+
+    <div class="StatsSells">
+        <span class="material-symbols-outlined">payments</span>
+        <h3>Acumulado en inventario:</h3>
+        <h4 id="SellInv">$0.00</h4>
+        <h3>Vendido hoy:</h3>
+        <h4 id="SellTdy">$0.00</h4>
+    </div>
+
+    <div class="MemPrices">
+        <span class="material-symbols-outlined">badge</span>
+        <h3>Precio de inscripción:</h3>
+        <h4 id="InsPrice">$0.00</h4>
+        <h3>Precio de mensualidad:</h3>
+        <h4 id="MonPrice">$0.00</h4>
+    </div>
+
+    <div class="ModMemPrices">
+        <span class="material-symbols-outlined"> request_quote</span>
+        <h3>Modificar precio de inscripción:</h3>
+        <label>$</label><input id="Insc" type="number" placeholder=" - - -">
+        <button id="ModInsc">Modificar</button>
+        <h3>Modificar precio de mensualidad:</h3>
+        <label>$</label><input id="Month" type="number" placeholder=" - - -">
+        <button id="ModMonth">Modificar</button>
+    </div>
+
+    <div class="Notes">
+
+        <div class="NoteHead">
+            <h3>Notas:</h3>
+            <span>
+                <button id="AddNote"><span class="material-symbols-outlined">chevron_left</span></button>
+                <button id="DelNote"><span class="material-symbols-outlined">chevron_right </span></button>
+                <button id="AddNote"><span class="material-symbols-outlined">add</span></button>
+                <button id="DelNote"><span class="material-symbols-outlined">delete</span></button>
+            </span>
+        </div>
+
+        <div class="ViewNotes">
+            <p>*** No hay notas agregadas ***</p>
+        </div>
+
+        <div class="WriteNote">
+            <textarea name="Note" id="Note" placeholder="Escribe una nota . . ."></textarea>
+            <div>
+                <button id="AddNoteE">Agregar</button>
+                <button id="CancelNote">Cancelar</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js"></script>
+    <script src="../Scripts/HomePage.js"></script>
+
+</body>
+</html>

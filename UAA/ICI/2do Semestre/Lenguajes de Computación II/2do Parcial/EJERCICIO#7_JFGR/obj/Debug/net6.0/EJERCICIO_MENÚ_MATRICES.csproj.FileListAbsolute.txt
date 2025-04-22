@@ -1,0 +1,15 @@
+C:\Users\xxjfg\Desktop\EJERCICIO_MENÚ_MATRICES\bin\Debug\net6.0\EJERCICIO_MENÚ_MATRICES.exe
+C:\Users\xxjfg\Desktop\EJERCICIO_MENÚ_MATRICES\bin\Debug\net6.0\EJERCICIO_MENÚ_MATRICES.deps.json
+C:\Users\xxjfg\Desktop\EJERCICIO_MENÚ_MATRICES\bin\Debug\net6.0\EJERCICIO_MENÚ_MATRICES.runtimeconfig.json
+C:\Users\xxjfg\Desktop\EJERCICIO_MENÚ_MATRICES\bin\Debug\net6.0\EJERCICIO_MENÚ_MATRICES.dll
+C:\Users\xxjfg\Desktop\EJERCICIO_MENÚ_MATRICES\bin\Debug\net6.0\EJERCICIO_MENÚ_MATRICES.pdb
+C:\Users\xxjfg\Desktop\EJERCICIO_MENÚ_MATRICES\obj\Debug\net6.0\EJERCICIO_MENÚ_MATRICES.csproj.AssemblyReference.cache
+C:\Users\xxjfg\Desktop\EJERCICIO_MENÚ_MATRICES\obj\Debug\net6.0\EJERCICIO_MENÚ_MATRICES.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\xxjfg\Desktop\EJERCICIO_MENÚ_MATRICES\obj\Debug\net6.0\EJERCICIO_MENÚ_MATRICES.AssemblyInfoInputs.cache
+C:\Users\xxjfg\Desktop\EJERCICIO_MENÚ_MATRICES\obj\Debug\net6.0\EJERCICIO_MENÚ_MATRICES.AssemblyInfo.cs
+C:\Users\xxjfg\Desktop\EJERCICIO_MENÚ_MATRICES\obj\Debug\net6.0\EJERCICIO_MENÚ_MATRICES.csproj.CoreCompileInputs.cache
+C:\Users\xxjfg\Desktop\EJERCICIO_MENÚ_MATRICES\obj\Debug\net6.0\EJERCICIO_MENÚ_MATRICES.dll
+C:\Users\xxjfg\Desktop\EJERCICIO_MENÚ_MATRICES\obj\Debug\net6.0\refint\EJERCICIO_MENÚ_MATRICES.dll
+C:\Users\xxjfg\Desktop\EJERCICIO_MENÚ_MATRICES\obj\Debug\net6.0\EJERCICIO_MENÚ_MATRICES.pdb
+C:\Users\xxjfg\Desktop\EJERCICIO_MENÚ_MATRICES\obj\Debug\net6.0\EJERCICIO_MENÚ_MATRICES.genruntimeconfig.cache
+C:\Users\xxjfg\Desktop\EJERCICIO_MENÚ_MATRICES\obj\Debug\net6.0\ref\EJERCICIO_MENÚ_MATRICES.dll

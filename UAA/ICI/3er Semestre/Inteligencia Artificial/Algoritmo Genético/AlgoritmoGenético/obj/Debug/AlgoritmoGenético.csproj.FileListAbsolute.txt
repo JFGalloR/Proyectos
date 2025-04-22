@@ -1,0 +1,33 @@
+C:\Users\ICI203IA\source\repos\AlgoritmoGenético\AlgoritmoGenético\obj\Debug\AlgoritmoGenético.csproj.AssemblyReference.cache
+C:\Users\ICI203IA\source\repos\AlgoritmoGenético\AlgoritmoGenético\obj\Debug\AlgoritmoGenético.Grafica.resources
+C:\Users\ICI203IA\source\repos\AlgoritmoGenético\AlgoritmoGenético\obj\Debug\AlgoritmoGenético.Properties.Resources.resources
+C:\Users\ICI203IA\source\repos\AlgoritmoGenético\AlgoritmoGenético\obj\Debug\AlgoritmoGenético.csproj.GenerateResource.cache
+C:\Users\ICI203IA\source\repos\AlgoritmoGenético\AlgoritmoGenético\obj\Debug\AlgoritmoGenético.csproj.CoreCompileInputs.cache
+C:\Users\ICI203IA\source\repos\AlgoritmoGenético\AlgoritmoGenético\bin\Debug\AlgoritmoGenético.exe.config
+C:\Users\ICI203IA\source\repos\AlgoritmoGenético\AlgoritmoGenético\bin\Debug\AlgoritmoGenético.exe
+C:\Users\ICI203IA\source\repos\AlgoritmoGenético\AlgoritmoGenético\bin\Debug\AlgoritmoGenético.pdb
+C:\Users\ICI203IA\source\repos\AlgoritmoGenético\AlgoritmoGenético\obj\Debug\AlgoritmoGenético.Inicio.resources
+C:\Users\ICI203IA\source\repos\AlgoritmoGenético\AlgoritmoGenético\obj\Debug\AlgoritmoGenético.exe
+C:\Users\ICI203IA\source\repos\AlgoritmoGenético\AlgoritmoGenético\obj\Debug\AlgoritmoGenético.pdb
+C:\Users\pespa\OneDrive\Escritorio\AlgoritmoGenético\AlgoritmoGenético\AlgoritmoGenético\bin\Debug\AlgoritmoGenético.exe.config
+C:\Users\pespa\OneDrive\Escritorio\AlgoritmoGenético\AlgoritmoGenético\AlgoritmoGenético\bin\Debug\AlgoritmoGenético.exe
+C:\Users\pespa\OneDrive\Escritorio\AlgoritmoGenético\AlgoritmoGenético\AlgoritmoGenético\bin\Debug\AlgoritmoGenético.pdb
+C:\Users\pespa\OneDrive\Escritorio\AlgoritmoGenético\AlgoritmoGenético\AlgoritmoGenético\obj\Debug\AlgoritmoGenético.csproj.AssemblyReference.cache
+C:\Users\pespa\OneDrive\Escritorio\AlgoritmoGenético\AlgoritmoGenético\AlgoritmoGenético\obj\Debug\AlgoritmoGenético.Inicio.resources
+C:\Users\pespa\OneDrive\Escritorio\AlgoritmoGenético\AlgoritmoGenético\AlgoritmoGenético\obj\Debug\AlgoritmoGenético.Grafica.resources
+C:\Users\pespa\OneDrive\Escritorio\AlgoritmoGenético\AlgoritmoGenético\AlgoritmoGenético\obj\Debug\AlgoritmoGenético.Properties.Resources.resources
+C:\Users\pespa\OneDrive\Escritorio\AlgoritmoGenético\AlgoritmoGenético\AlgoritmoGenético\obj\Debug\AlgoritmoGenético.csproj.GenerateResource.cache
+C:\Users\pespa\OneDrive\Escritorio\AlgoritmoGenético\AlgoritmoGenético\AlgoritmoGenético\obj\Debug\AlgoritmoGenético.csproj.CoreCompileInputs.cache
+C:\Users\pespa\OneDrive\Escritorio\AlgoritmoGenético\AlgoritmoGenético\AlgoritmoGenético\obj\Debug\AlgoritmoGenético.exe
+C:\Users\pespa\OneDrive\Escritorio\AlgoritmoGenético\AlgoritmoGenético\AlgoritmoGenético\obj\Debug\AlgoritmoGenético.pdb
+C:\Users\xxjfg\Desktop\AlgoritmoGenético (2)\AlgoritmoGenético\AlgoritmoGenético\AlgoritmoGenético\bin\Debug\AlgoritmoGenético.exe.config
+C:\Users\xxjfg\Desktop\AlgoritmoGenético (2)\AlgoritmoGenético\AlgoritmoGenético\AlgoritmoGenético\bin\Debug\AlgoritmoGenético.exe
+C:\Users\xxjfg\Desktop\AlgoritmoGenético (2)\AlgoritmoGenético\AlgoritmoGenético\AlgoritmoGenético\bin\Debug\AlgoritmoGenético.pdb
+C:\Users\xxjfg\Desktop\AlgoritmoGenético (2)\AlgoritmoGenético\AlgoritmoGenético\AlgoritmoGenético\obj\Debug\AlgoritmoGenético.csproj.AssemblyReference.cache
+C:\Users\xxjfg\Desktop\AlgoritmoGenético (2)\AlgoritmoGenético\AlgoritmoGenético\AlgoritmoGenético\obj\Debug\AlgoritmoGenético.Inicio.resources
+C:\Users\xxjfg\Desktop\AlgoritmoGenético (2)\AlgoritmoGenético\AlgoritmoGenético\AlgoritmoGenético\obj\Debug\AlgoritmoGenético.Grafica.resources
+C:\Users\xxjfg\Desktop\AlgoritmoGenético (2)\AlgoritmoGenético\AlgoritmoGenético\AlgoritmoGenético\obj\Debug\AlgoritmoGenético.Properties.Resources.resources
+C:\Users\xxjfg\Desktop\AlgoritmoGenético (2)\AlgoritmoGenético\AlgoritmoGenético\AlgoritmoGenético\obj\Debug\AlgoritmoGenético.csproj.GenerateResource.cache
+C:\Users\xxjfg\Desktop\AlgoritmoGenético (2)\AlgoritmoGenético\AlgoritmoGenético\AlgoritmoGenético\obj\Debug\AlgoritmoGenético.csproj.CoreCompileInputs.cache
+C:\Users\xxjfg\Desktop\AlgoritmoGenético (2)\AlgoritmoGenético\AlgoritmoGenético\AlgoritmoGenético\obj\Debug\AlgoritmoGenético.exe
+C:\Users\xxjfg\Desktop\AlgoritmoGenético (2)\AlgoritmoGenético\AlgoritmoGenético\AlgoritmoGenético\obj\Debug\AlgoritmoGenético.pdb

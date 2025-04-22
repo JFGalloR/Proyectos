@@ -1,0 +1,17 @@
+C:\Users\xxjfg\Desktop\Práctica_Archivos_Txt\bin\Debug\net6.0-windows\Práctica_Archivos_Txt.exe
+C:\Users\xxjfg\Desktop\Práctica_Archivos_Txt\bin\Debug\net6.0-windows\Práctica_Archivos_Txt.deps.json
+C:\Users\xxjfg\Desktop\Práctica_Archivos_Txt\bin\Debug\net6.0-windows\Práctica_Archivos_Txt.runtimeconfig.json
+C:\Users\xxjfg\Desktop\Práctica_Archivos_Txt\bin\Debug\net6.0-windows\Práctica_Archivos_Txt.dll
+C:\Users\xxjfg\Desktop\Práctica_Archivos_Txt\bin\Debug\net6.0-windows\Práctica_Archivos_Txt.pdb
+C:\Users\xxjfg\Desktop\Práctica_Archivos_Txt\obj\Debug\net6.0-windows\Práctica_Archivos_Txt.csproj.AssemblyReference.cache
+C:\Users\xxjfg\Desktop\Práctica_Archivos_Txt\obj\Debug\net6.0-windows\Práctica_Archivos_Txt.Form1.resources
+C:\Users\xxjfg\Desktop\Práctica_Archivos_Txt\obj\Debug\net6.0-windows\Práctica_Archivos_Txt.csproj.GenerateResource.cache
+C:\Users\xxjfg\Desktop\Práctica_Archivos_Txt\obj\Debug\net6.0-windows\Práctica_Archivos_Txt.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\xxjfg\Desktop\Práctica_Archivos_Txt\obj\Debug\net6.0-windows\Práctica_Archivos_Txt.AssemblyInfoInputs.cache
+C:\Users\xxjfg\Desktop\Práctica_Archivos_Txt\obj\Debug\net6.0-windows\Práctica_Archivos_Txt.AssemblyInfo.cs
+C:\Users\xxjfg\Desktop\Práctica_Archivos_Txt\obj\Debug\net6.0-windows\Práctica_Archivos_Txt.csproj.CoreCompileInputs.cache
+C:\Users\xxjfg\Desktop\Práctica_Archivos_Txt\obj\Debug\net6.0-windows\Práctica_Archivos_Txt.dll
+C:\Users\xxjfg\Desktop\Práctica_Archivos_Txt\obj\Debug\net6.0-windows\refint\Práctica_Archivos_Txt.dll
+C:\Users\xxjfg\Desktop\Práctica_Archivos_Txt\obj\Debug\net6.0-windows\Práctica_Archivos_Txt.pdb
+C:\Users\xxjfg\Desktop\Práctica_Archivos_Txt\obj\Debug\net6.0-windows\Práctica_Archivos_Txt.genruntimeconfig.cache
+C:\Users\xxjfg\Desktop\Práctica_Archivos_Txt\obj\Debug\net6.0-windows\ref\Práctica_Archivos_Txt.dll

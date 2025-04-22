@@ -1,0 +1,8 @@
+C:\Users\pespa\OneDrive\Documentos\UAA\2do Semestre\Lenguajes de Computación\ROSALINDA\C# Segundo Parcial\Tarea 11\TrabajadoresSueldos\TrabajadoresSueldos\bin\Debug\TrabajadoresSueldos.exe.config
+C:\Users\pespa\OneDrive\Documentos\UAA\2do Semestre\Lenguajes de Computación\ROSALINDA\C# Segundo Parcial\Tarea 11\TrabajadoresSueldos\TrabajadoresSueldos\bin\Debug\TrabajadoresSueldos.exe
+C:\Users\pespa\OneDrive\Documentos\UAA\2do Semestre\Lenguajes de Computación\ROSALINDA\C# Segundo Parcial\Tarea 11\TrabajadoresSueldos\TrabajadoresSueldos\bin\Debug\TrabajadoresSueldos.pdb
+C:\Users\pespa\OneDrive\Documentos\UAA\2do Semestre\Lenguajes de Computación\ROSALINDA\C# Segundo Parcial\Tarea 11\TrabajadoresSueldos\TrabajadoresSueldos\obj\Debug\TrabajadoresSueldos.csproj.AssemblyReference.cache
+C:\Users\pespa\OneDrive\Documentos\UAA\2do Semestre\Lenguajes de Computación\ROSALINDA\C# Segundo Parcial\Tarea 11\TrabajadoresSueldos\TrabajadoresSueldos\obj\Debug\TrabajadoresSueldos.csproj.SuggestedBindingRedirects.cache
+C:\Users\pespa\OneDrive\Documentos\UAA\2do Semestre\Lenguajes de Computación\ROSALINDA\C# Segundo Parcial\Tarea 11\TrabajadoresSueldos\TrabajadoresSueldos\obj\Debug\TrabajadoresSueldos.csproj.CoreCompileInputs.cache
+C:\Users\pespa\OneDrive\Documentos\UAA\2do Semestre\Lenguajes de Computación\ROSALINDA\C# Segundo Parcial\Tarea 11\TrabajadoresSueldos\TrabajadoresSueldos\obj\Debug\TrabajadoresSueldos.exe
+C:\Users\pespa\OneDrive\Documentos\UAA\2do Semestre\Lenguajes de Computación\ROSALINDA\C# Segundo Parcial\Tarea 11\TrabajadoresSueldos\TrabajadoresSueldos\obj\Debug\TrabajadoresSueldos.pdb

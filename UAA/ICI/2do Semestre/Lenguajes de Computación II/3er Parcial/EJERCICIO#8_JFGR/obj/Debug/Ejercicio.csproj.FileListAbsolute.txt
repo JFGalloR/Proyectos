@@ -1,0 +1,11 @@
+C:\Users\ICI203IA\Desktop\Ejercicio\bin\Debug\Ejercicio.exe.config
+C:\Users\ICI203IA\Desktop\Ejercicio\bin\Debug\Ejercicio.exe
+C:\Users\ICI203IA\Desktop\Ejercicio\bin\Debug\Ejercicio.pdb
+C:\Users\ICI203IA\Desktop\Ejercicio\obj\Debug\Ejercicio.csproj.AssemblyReference.cache
+C:\Users\ICI203IA\Desktop\Ejercicio\obj\Debug\Ejercicio.csproj.SuggestedBindingRedirects.cache
+C:\Users\ICI203IA\Desktop\Ejercicio\obj\Debug\Ejercicio.Form1.resources
+C:\Users\ICI203IA\Desktop\Ejercicio\obj\Debug\Ejercicio.Properties.Resources.resources
+C:\Users\ICI203IA\Desktop\Ejercicio\obj\Debug\Ejercicio.csproj.GenerateResource.cache
+C:\Users\ICI203IA\Desktop\Ejercicio\obj\Debug\Ejercicio.csproj.CoreCompileInputs.cache
+C:\Users\ICI203IA\Desktop\Ejercicio\obj\Debug\Ejercicio.exe
+C:\Users\ICI203IA\Desktop\Ejercicio\obj\Debug\Ejercicio.pdb

@@ -1,0 +1,17 @@
+C:\Users\xxjfg\Desktop\EJERCICIO_RadioButton\bin\Debug\net6.0-windows\EJERCICIO_RadioButton.exe
+C:\Users\xxjfg\Desktop\EJERCICIO_RadioButton\bin\Debug\net6.0-windows\EJERCICIO_RadioButton.deps.json
+C:\Users\xxjfg\Desktop\EJERCICIO_RadioButton\bin\Debug\net6.0-windows\EJERCICIO_RadioButton.runtimeconfig.json
+C:\Users\xxjfg\Desktop\EJERCICIO_RadioButton\bin\Debug\net6.0-windows\EJERCICIO_RadioButton.dll
+C:\Users\xxjfg\Desktop\EJERCICIO_RadioButton\bin\Debug\net6.0-windows\EJERCICIO_RadioButton.pdb
+C:\Users\xxjfg\Desktop\EJERCICIO_RadioButton\obj\Debug\net6.0-windows\EJERCICIO_RadioButton.csproj.AssemblyReference.cache
+C:\Users\xxjfg\Desktop\EJERCICIO_RadioButton\obj\Debug\net6.0-windows\EJERCICIO_RadioButton.Form1.resources
+C:\Users\xxjfg\Desktop\EJERCICIO_RadioButton\obj\Debug\net6.0-windows\EJERCICIO_RadioButton.csproj.GenerateResource.cache
+C:\Users\xxjfg\Desktop\EJERCICIO_RadioButton\obj\Debug\net6.0-windows\EJERCICIO_RadioButton.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\xxjfg\Desktop\EJERCICIO_RadioButton\obj\Debug\net6.0-windows\EJERCICIO_RadioButton.AssemblyInfoInputs.cache
+C:\Users\xxjfg\Desktop\EJERCICIO_RadioButton\obj\Debug\net6.0-windows\EJERCICIO_RadioButton.AssemblyInfo.cs
+C:\Users\xxjfg\Desktop\EJERCICIO_RadioButton\obj\Debug\net6.0-windows\EJERCICIO_RadioButton.csproj.CoreCompileInputs.cache
+C:\Users\xxjfg\Desktop\EJERCICIO_RadioButton\obj\Debug\net6.0-windows\EJERCICIO_RadioButton.dll
+C:\Users\xxjfg\Desktop\EJERCICIO_RadioButton\obj\Debug\net6.0-windows\refint\EJERCICIO_RadioButton.dll
+C:\Users\xxjfg\Desktop\EJERCICIO_RadioButton\obj\Debug\net6.0-windows\EJERCICIO_RadioButton.pdb
+C:\Users\xxjfg\Desktop\EJERCICIO_RadioButton\obj\Debug\net6.0-windows\EJERCICIO_RadioButton.genruntimeconfig.cache
+C:\Users\xxjfg\Desktop\EJERCICIO_RadioButton\obj\Debug\net6.0-windows\ref\EJERCICIO_RadioButton.dll

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌎 GeoLocator | Primer Parte PF</title>
+    <link rel="shortcut icon" href="Recursos/Icon_GeoLocator.png" type="image/png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=public" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet" href="Estilos/PrimeraParte_PF.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="Scripts/Script_PrimeraParte_NFA.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>🌎<span>[Geo</span><span>Locator]</span></h1>
+        <h2><span>Latitud</span><span>Longitud</span></h2>
+    </header>
+
+    <main>
+
+        <div class="Inputs">
+            <div class="ContInputs">
+                <label for="Latitud">Ingresa el valor de la latitud:</label>
+                <input type="text" name="Latitud" id="Latitud" autocomplete="off" placeholder="(-90 <-> +90)">
+                <h5 id="ErrorLat">❌ Ingresa un número entre -90 y +90</h5>
+                <label for="Longitud">Ingresa el valor de la longitud:</label>
+                <input type="text" name="Longitud" id="Longitud" autocomplete="off" placeholder="(-180 <-> +180)">
+                <h5 id="ErrorLon">❌ Ingresa un número entre -180 y +180</h5>
+            </div>
+            <button id="Localizar" disabled=true onclick="localizarCoordenadas()">Localizar</button>
+        </div>
+
+        <div class="Mapa">
+            <div id="Mapa"></div>
+            <div class="InitMapa">
+                <h3>Ingresa los parámetros</h3>
+                <span class="material-symbols-outlined">public</span>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Juan Francisco Gallo Ramírez</p>
+        <p>Proyecto Final</p>
+        <p>Autómatas I</p>
+        <p>Diciembre 2024</p>
+    </footer>
+
+</body>
+</html>

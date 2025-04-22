@@ -1,2 +1,2 @@
 # Proyectos
-Este es mi repositorio destinado a todos los mi proyectos tanto escolares como personales.
+Este es mi repositorio destinado a todos mis proyectos eaborados, tanto escolares como personales.

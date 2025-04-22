@@ -1,0 +1,8 @@
+C:\Users\pespa\OneDrive\Documentos\UAA\2do Semestre\Lenguajes de Computación\ROSALINDA\C# Segundo Parcial\Tarea 11\Banco\Banco\bin\Debug\Banco.exe.config
+C:\Users\pespa\OneDrive\Documentos\UAA\2do Semestre\Lenguajes de Computación\ROSALINDA\C# Segundo Parcial\Tarea 11\Banco\Banco\bin\Debug\Banco.exe
+C:\Users\pespa\OneDrive\Documentos\UAA\2do Semestre\Lenguajes de Computación\ROSALINDA\C# Segundo Parcial\Tarea 11\Banco\Banco\bin\Debug\Banco.pdb
+C:\Users\pespa\OneDrive\Documentos\UAA\2do Semestre\Lenguajes de Computación\ROSALINDA\C# Segundo Parcial\Tarea 11\Banco\Banco\obj\Debug\Banco.csproj.AssemblyReference.cache
+C:\Users\pespa\OneDrive\Documentos\UAA\2do Semestre\Lenguajes de Computación\ROSALINDA\C# Segundo Parcial\Tarea 11\Banco\Banco\obj\Debug\Banco.csproj.SuggestedBindingRedirects.cache
+C:\Users\pespa\OneDrive\Documentos\UAA\2do Semestre\Lenguajes de Computación\ROSALINDA\C# Segundo Parcial\Tarea 11\Banco\Banco\obj\Debug\Banco.csproj.CoreCompileInputs.cache
+C:\Users\pespa\OneDrive\Documentos\UAA\2do Semestre\Lenguajes de Computación\ROSALINDA\C# Segundo Parcial\Tarea 11\Banco\Banco\obj\Debug\Banco.exe
+C:\Users\pespa\OneDrive\Documentos\UAA\2do Semestre\Lenguajes de Computación\ROSALINDA\C# Segundo Parcial\Tarea 11\Banco\Banco\obj\Debug\Banco.pdb

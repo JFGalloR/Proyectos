@@ -1,0 +1,8 @@
+C:\Users\pespa\OneDrive\Documentos\UAA\2do Semestre\Lenguajes de Computación\ROSALINDA\C# Segundo Parcial\Tarea 11\Cuadrado\Cuadrado\obj\Debug\Cuadrado.csproj.AssemblyReference.cache
+C:\Users\pespa\OneDrive\Documentos\UAA\2do Semestre\Lenguajes de Computación\ROSALINDA\C# Segundo Parcial\Tarea 11\Cuadrado\Cuadrado\obj\Debug\Cuadrado.csproj.SuggestedBindingRedirects.cache
+C:\Users\pespa\OneDrive\Documentos\UAA\2do Semestre\Lenguajes de Computación\ROSALINDA\C# Segundo Parcial\Tarea 11\Cuadrado\Cuadrado\obj\Debug\Cuadrado.csproj.CoreCompileInputs.cache
+C:\Users\pespa\OneDrive\Documentos\UAA\2do Semestre\Lenguajes de Computación\ROSALINDA\C# Segundo Parcial\Tarea 11\Cuadrado\Cuadrado\bin\Debug\Cuadrado.exe.config
+C:\Users\pespa\OneDrive\Documentos\UAA\2do Semestre\Lenguajes de Computación\ROSALINDA\C# Segundo Parcial\Tarea 11\Cuadrado\Cuadrado\bin\Debug\Cuadrado.exe
+C:\Users\pespa\OneDrive\Documentos\UAA\2do Semestre\Lenguajes de Computación\ROSALINDA\C# Segundo Parcial\Tarea 11\Cuadrado\Cuadrado\bin\Debug\Cuadrado.pdb
+C:\Users\pespa\OneDrive\Documentos\UAA\2do Semestre\Lenguajes de Computación\ROSALINDA\C# Segundo Parcial\Tarea 11\Cuadrado\Cuadrado\obj\Debug\Cuadrado.exe
+C:\Users\pespa\OneDrive\Documentos\UAA\2do Semestre\Lenguajes de Computación\ROSALINDA\C# Segundo Parcial\Tarea 11\Cuadrado\Cuadrado\obj\Debug\Cuadrado.pdb

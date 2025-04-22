@@ -1,0 +1,8 @@
+C:\Users\pespa\OneDrive\Documentos\UAA\2do Semestre\Lenguajes de Computación\ROSALINDA\C# Segundo Parcial\Tarea 11\ClasePersona\ClasePersona\bin\Debug\ClasePersona.exe.config
+C:\Users\pespa\OneDrive\Documentos\UAA\2do Semestre\Lenguajes de Computación\ROSALINDA\C# Segundo Parcial\Tarea 11\ClasePersona\ClasePersona\bin\Debug\ClasePersona.exe
+C:\Users\pespa\OneDrive\Documentos\UAA\2do Semestre\Lenguajes de Computación\ROSALINDA\C# Segundo Parcial\Tarea 11\ClasePersona\ClasePersona\bin\Debug\ClasePersona.pdb
+C:\Users\pespa\OneDrive\Documentos\UAA\2do Semestre\Lenguajes de Computación\ROSALINDA\C# Segundo Parcial\Tarea 11\ClasePersona\ClasePersona\obj\Debug\ClasePersona.csproj.AssemblyReference.cache
+C:\Users\pespa\OneDrive\Documentos\UAA\2do Semestre\Lenguajes de Computación\ROSALINDA\C# Segundo Parcial\Tarea 11\ClasePersona\ClasePersona\obj\Debug\ClasePersona.csproj.SuggestedBindingRedirects.cache
+C:\Users\pespa\OneDrive\Documentos\UAA\2do Semestre\Lenguajes de Computación\ROSALINDA\C# Segundo Parcial\Tarea 11\ClasePersona\ClasePersona\obj\Debug\ClasePersona.csproj.CoreCompileInputs.cache
+C:\Users\pespa\OneDrive\Documentos\UAA\2do Semestre\Lenguajes de Computación\ROSALINDA\C# Segundo Parcial\Tarea 11\ClasePersona\ClasePersona\obj\Debug\ClasePersona.exe
+C:\Users\pespa\OneDrive\Documentos\UAA\2do Semestre\Lenguajes de Computación\ROSALINDA\C# Segundo Parcial\Tarea 11\ClasePersona\ClasePersona\obj\Debug\ClasePersona.pdb

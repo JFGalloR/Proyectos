@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Styles/AddProductPage.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+<body>
+
+    <h1 id="Title">Agregar Producto</h1>
+
+    <form class="Data" id="addProductForm">
+        <div class="DataCont">
+            <h3>Nuevo producto</h3>
+            <div class="Cont">
+                <div class="ContDataInput">
+                    <label for="Id">Código:</label>
+                    <input type="text" name="Id" id="Id" placeholder="- - -" autocomplete="off" required>
+                    <label for="Name">Producto:</label>
+                    <input type="text" name="Name" id="Name" placeholder="- - -" autocomplete="off" required>
+                    <label for="Cant">Cantidad:</label>
+                    <input type="number" name="Cant" id="Cant" placeholder="- - -" autocomplete="off" required>
+                    <label for="Price">Precio:</label>
+                    <input type="number" name="Price" id="Price" placeholder="- - -" autocomplete="off" required step="any">
+                </div>
+                <button id="BtnAddProd" type="submit">Agregar</button>
+            </div>
+        </div>
+    </form>
+
+    <div class="Data">
+        <div class="DataCont">
+            <h3>Modificar Producto</h3>
+            <form id="Data" class="Search">
+                <label for="IdM"># Producto:</label>
+                <input type="number" name="Id" id="IdM" placeholder="- - -" autofocus required>
+                <button type="submit" id="searchProductBtn">Buscar</button>           
+            </form>
+
+            <form class="Cont" id="ModProd">
+                <div class="ContDataInput">
+                    <input type="hidden" name="IdProd" id="IdProd">
+                    <label for="IdMDisplay">Código:</label>
+                    <input type="text" name="IdMDisplay" id="IdMDisplay" placeholder="- - -" autocomplete="off" readonly>
+                    <label for="NameM">Producto:</label>
+                    <input type="text" name="NameM" id="NameM" placeholder="- - -" autocomplete="off" readonly>
+                    <label for="CantM">Cantidad:</label>
+                    <input type="number" name="CantM" id="CantM" placeholder="- - -" autocomplete="off" readonly>
+                    <label for="PriceM">Precio:</label>
+                    <input type="number" name="PriceM" id="PriceM" placeholder="- - -" autocomplete="off" step="any" readonly>
+                </div>
+                <button id="BtnModifyProd" type="submit" disabled>Modificar</button>
+            </form>
+        </div>
+    </div>
+
+    <input type="hidden" id="NewId" name="NewId">
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const addProductForm = document.getElementById("addProductForm");
+            addProductForm.addEventListener("submit", function(event) {
+                event.preventDefault();
+
+                const id = document.getElementById("Id").value;
+                const name = document.getElementById("Name").value;
+                const cant = document.getElementById("Cant").value;
+                const price = document.getElementById("Price").value;
+
+                fetch('../Scripts/AddProduct.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: new URLSearchParams({
+                        'Id': id,
+                        'Name': name,
+                        'Cant': cant,
+                        'Price': price
+                    })
+                })
+                .then(response => response.text())
+                .then(data => {
+                    alert(data);
+                    addProductForm.reset();
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Error al agregar producto');
+                });
+            });
+
+            const searchProductForm = document.getElementById("Data");
+            const modifyProductForm = document.getElementById("ModProd");
+            const btnModifyProd = document.getElementById("BtnModifyProd");
+
+            searchProductForm.addEventListener("submit", function(event) {
+                event.preventDefault();
+
+                const productId = document.getElementById("IdM").value;
+
+                if (productId) {
+                    fetch('../Scripts/GetProduct.php', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded',
+                        },
+                        body: new URLSearchParams({
+                            'Id': productId
+                        })
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            document.getElementById("IdMDisplay").value = data.product.id_producto;
+                            document.getElementById("NameM").value = data.product.nombre;
+                            document.getElementById("CantM").value = data.product.stock;
+                            document.getElementById("PriceM").value = data.product.precio;
+
+                            document.getElementById("NewId").value = data.product.id_producto;
+
+                            document.getElementById("IdMDisplay").readOnly = false;
+                            document.getElementById("NameM").readOnly = false;
+                            document.getElementById("CantM").readOnly = false;
+                            document.getElementById("PriceM").readOnly = false;
+
+                            btnModifyProd.disabled = false;
+                        } else {
+                            alert(data.message);
+                            btnModifyProd.disabled = true;
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        alert('Error al buscar producto');
+                    });
+                }
+            });
+
+            modifyProductForm.addEventListener("submit", function(event) {
+                event.preventDefault();
+
+                const productId = document.getElementById("IdMDisplay").value;
+                const name = document.getElementById("NameM").value;
+                const cant = document.getElementById("CantM").value;
+                const price = document.getElementById("PriceM").value;
+                const newId = document.getElementById("NewId").value;
+
+                fetch('../Scripts/UpdateProduct.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: new URLSearchParams({
+                        'IdProd': newId,
+                        'Name': name,
+                        'Cant': cant,
+                        'Price': price
+                    })
+                })
+                .then(response => response.text())
+                .then(data => {
+                    alert(data);
+
+                    modifyProductForm.reset();
+
+                    document.getElementById("IdMDisplay").readOnly = true;
+                    document.getElementById("NameM").readOnly = true;
+                    document.getElementById("CantM").readOnly = true;
+                    document.getElementById("PriceM").readOnly = true;
+
+                    btnModifyProd.disabled = true;
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('❌ Error al modificar producto ❌');
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

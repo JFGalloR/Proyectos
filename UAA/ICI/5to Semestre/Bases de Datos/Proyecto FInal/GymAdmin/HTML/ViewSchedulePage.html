@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Styles/ViewSchedulePage.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+<body>
+
+    <h1 id="Title">Ver Horario</h1>
+
+    <div class="Data">
+        <div></div>
+        <div class="Cont">
+            <table>
+                <thead id="TableHeader">
+                    <tr>
+                        <th>Lunes</th>
+                        <th>Martes</th>
+                        <th>Miércoles</th>
+                        <th>Jueves</th>
+                        <th>Viernes</th>
+                        <th>Sábado</th>
+                        <th>Domingo</th>
+                    </tr>
+                </thead>
+                <tbody id="TableBody">
+                    <!-- El contenido será cargado aquí por JavaScript -->
+                </tbody>
+            </table>
+        </div>
+        <div class="InputCont">
+            <input type="radio" name="TMod" id="TAct" checked><label for="TAct">Ver Horario</label>
+            <input type="radio" name="TMod" id="TIns" ><label for="TIns">Ver Instructores</label>
+            <input type="radio" name="TMod" id="TMem" ><label for="TMem">Ver Inscritos</label>
+        </div>
+    </div>
+   
+    <script>
+        document.addEventListener("DOMContentLoaded", async () => {
+
+            const loadActivities = async () => {
+                try {
+                    const response = await fetch("../Scripts/GetActivities.php");
+                    const activities = await response.json();
+                    
+                    const tableBody = document.getElementById("TableBody");
+                    tableBody.innerHTML = "";
+
+                    const daysOfWeek = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'];
+                    const days = daysOfWeek.map(day => []);
+
+                    document.getElementById("TableHeader").innerHTML = `
+                        <tr>
+                            <th>Lunes</th>
+                            <th>Martes</th>
+                            <th>Miércoles</th>
+                            <th>Jueves</th>
+                            <th>Viernes</th>
+                            <th>Sábado</th>
+                            <th>Domingo</th>
+                        </tr>
+                    `;
+
+                    if (activities.length === 0) {
+                        tableBody.innerHTML = `
+                            <tr><td colspan="7" class="NoRecords">*** No hay registros ***</td></tr>
+                        `;
+                        return;
+                    }
+
+                    activities.forEach(activity => {
+                        const dayIndex = activity.dia - 1;
+                        const instructorNombreCompleto = `${activity.instructor_nombre} ${activity.instructor_apellido}`;
+                        const activityInfo = ` 
+                            <h3 class="Hora">(${activity.hora_inicio} - ${activity.hora_final})</h3>
+                            <h4 class="Id">#${activity.id_actividad}</h4>
+                            <h4 class="Nombre">${activity.nombre}</h4>
+                            <h4 class="Instructor">${instructorNombreCompleto}</h4>
+                        `;
+                        days[dayIndex].push(activityInfo);
+                    });
+
+                    let rows = '';
+                    for (let i = 0; i < 7; i++) {
+                        rows += `<td>${days[i].join('')}</td>`;
+                    }
+                    tableBody.innerHTML = `<tr>${rows}</tr>`;
+
+                } catch (error) {
+                    console.error("Error al cargar las actividades: ", error);
+                }
+            };
+
+            const loadInstructors = async () => {
+                try {
+                    const response = await fetch("../Scripts/GetInstructors.php");
+                    const instructors = await response.json();
+                    
+                    const tableBody = document.getElementById("TableBody");
+                    tableBody.innerHTML = "";
+
+                    document.getElementById("TableHeader").innerHTML = `
+                        <tr>
+                            <th>ID Instructor</th>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Telefono</th>
+                            <th>RFC</th>
+                            <th>Fecha de Registro</th>
+                        </tr>
+                    `;
+
+                    if (instructors.length === 0) {
+                        tableBody.innerHTML = `
+                            <tr><td colspan="6" class="NoRecords">*** No hay registros ***</td></tr>
+                        `;
+                        return;
+                    }
+
+                    instructors.forEach(instructor => {
+                        tableBody.innerHTML += `
+                            <tr>
+                                <td>${instructor.id_instructor}</td>
+                                <td>${instructor.nombre}</td>
+                                <td>${instructor.apellido}</td>
+                                <td>${instructor.telefono}</td>
+                                <td>${instructor.RFC}</td>
+                                <td>${instructor.fecha_registro}</td>
+                            </tr>
+                        `;
+                    });
+
+                } catch (error) {
+                    console.error("Error al cargar los instructores: ", error);
+                }
+            };
+
+            const loadMembers = async () => {
+                try {
+                    const response = await fetch("../Scripts/GetActMembers.php");
+                    const members = await response.json();
+                    
+                    const tableBody = document.getElementById("TableBody");
+                    tableBody.innerHTML = "";
+
+                    document.getElementById("TableHeader").innerHTML = `
+                        <tr>
+                            <th>ID Miembro</th>
+                            <th>Nombre Miembro</th>
+                            <th>ID Actividad</th>
+                            <th>Nombre Actividad</th>
+                        </tr>
+                    `;
+
+                    if (members.length === 0) {
+                        tableBody.innerHTML = `
+                            <tr><td colspan="4" class="NoRecords">*** No hay registros ***</td></tr>
+                        `;
+                        return;
+                    }
+
+                    members.forEach(member => {
+                        tableBody.innerHTML += `
+                            <tr>
+                                <td>${member.id_miembro}</td>
+                                <td>${member.nombre_completo}</td>
+                                <td>${member.id_actividad}</td>
+                                <td>${member.nombre_actividad}</td>
+                            </tr>
+                        `;
+                    });
+                } catch (error) {
+                    console.error("Error al cargar los miembros inscritos: ", error);
+                }
+            };
+
+            document.getElementById("TAct").addEventListener("change", () => {
+                loadActivities();
+            });
+
+            document.getElementById("TIns").addEventListener("change", () => {
+                loadInstructors();
+            });
+
+            document.getElementById("TMem").addEventListener("change", () => {
+                loadMembers();
+            });
+
+            const loadContent = () => {
+                if (document.getElementById("TAct").checked) {
+                    loadActivities();
+                } else if (document.getElementById("TIns").checked) {
+                    loadInstructors();
+                } else if (document.getElementById("TMem").checked) {
+                    loadMembers();
+                }
+            };
+
+            document.querySelectorAll('input[name="TMod"]').forEach(radio => {
+                radio.addEventListener('change', loadContent);
+            });
+
+            loadContent();
+        });
+        
+    </script>
+</body>
+</html>

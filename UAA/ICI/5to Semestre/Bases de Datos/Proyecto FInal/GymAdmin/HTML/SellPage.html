@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Styles/SellPage.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+<body>
+
+    <h1 id="Title">Vender Productos</h1>
+
+    <div class="Data">
+
+        <form id="DataP" class="ProdId">
+            <label for="Id"># Producto:</label><input type="number" name="Id" id="Id" placeholder="- - -" autofocus required>
+            <button>Agregar</button>
+        </form>
+
+        <div class="Cont">
+            
+        <table>
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Precio</th>
+                </tr>
+            </thead>
+            <tbody id="membersTableBody">
+            </tbody>
+        </table>
+        </div>
+        
+        <div class="ContPay">
+            
+            <div id="DataC" class="ClientId">
+                <label for="Id"># Cliente:</label><input type="number" name="Id" id="ClientId" placeholder="- - -" autofocus required>
+            </div>
+
+            <div class="Pay">
+                <h3>Pago de Productos:</h3>
+                <div>
+                    <input type="radio" name="IPay" id="IEfect" value="Efectivo" checked><label for="IPay">Efectivo</label>
+                    <input type="radio" name="IPay" id="ITras" value="Transferencia"><label for="IPay">Transferencia</label>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="Total">
+
+        <div>
+            <h2>Total:</h2>
+            <h3>$<span id="TotPay"> - - - </span></h3>
+        </div>
+
+        <button id="Agr">Confirmar</button>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const addProductForm = document.getElementById("DataP");
+            const membersTableBody = document.getElementById("membersTableBody");
+            const confirmButton = document.getElementById("Agr");
+
+            let total = 0;
+
+            // Actualizar el total de la venta
+            function updateTotals() {
+                const totalElement = document.getElementById("TotPay");
+                totalElement.textContent = total.toFixed(2);
+            }
+
+            addProductForm.addEventListener("submit", function(event) {
+                event.preventDefault();
+
+                const productId = document.getElementById("Id").value;
+
+                if (productId) {
+                    fetch('../Scripts/GetProduct.php', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded',
+                        },
+                        body: new URLSearchParams({
+                            'Id': productId
+                        })
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            const product = data.product;
+                            const quantity = 1;
+
+                            let row = document.getElementById(`product-${product.id_producto}`);
+                            if (row) {
+                                let currentQuantity = parseInt(row.querySelector(".product-quantity").textContent);
+                                if (currentQuantity + quantity <= product.stock) {
+                                    row.querySelector(".product-quantity").textContent = currentQuantity + quantity;
+                                    total += product.precio * quantity;
+                                    updateTotals();
+                                } else {
+                                    alert("⚠️ No hay suficiente stock para agregar más de este producto. ⚠️");
+                                }
+                            } else {
+                                if (quantity <= product.stock) {
+                                    let newRow = document.createElement("tr");
+                                    newRow.id = `product-${product.id_producto}`;
+                                    newRow.innerHTML = `
+                                        <td>${product.id_producto}</td>
+                                        <td>${product.nombre}</td>
+                                        <td class="product-quantity">${quantity}</td>
+                                        <td>${product.precio.toFixed(2)}</td>
+                                    `;
+                                    membersTableBody.appendChild(newRow);
+                                    total += product.precio * quantity;
+                                    updateTotals();
+                                } else {
+                                    alert("⚠️ No hay suficiente stock. ⚠️");
+                                }
+                            }
+                        } else {
+                            alert(data.message);
+                        }
+
+                        addProductForm.reset();
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        alert('Error al obtener el producto');
+                    });
+                }
+            });
+
+            confirmButton.addEventListener('click', function(event) {
+                event.preventDefault();
+
+                const clientId = document.getElementById("ClientId").value;
+                if (!clientId) {
+                    alert("⚠️ Debes ingresar el ID del cliente. ⚠️");
+                    return;
+                }
+
+                const rows = membersTableBody.querySelectorAll("tr");
+                if (rows.length === 0) {
+                    alert("⚠️ No hay productos en la venta. ⚠️");
+                    return;
+                }
+
+                let productos = [];
+                rows.forEach(row => {
+                    const productId = row.children[0].textContent;
+                    const quantity = parseInt(row.querySelector(".product-quantity").textContent);
+                    const price = parseFloat(row.children[3].textContent);
+                    productos.push({ id_producto: productId, cantidad: quantity, precio: price });
+                });
+
+                fetch('../Scripts/NewSell.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: new URLSearchParams({
+                        'id_cliente': clientId,
+                        'total': total,
+                        'tipo_pago': document.querySelector('input[name="IPay"]:checked').value,
+                        'productos': JSON.stringify(productos)
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert("✅ Venta realizada con éxito. ✅");
+                        location.reload();
+                    } else {
+                        alert(data.message);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Error al realizar la venta');
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

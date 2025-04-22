@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: 'Kanit', sans-serif;
+    box-sizing: border-box;
+    transition: all 0.2s;
+}
+
+body {
+    background: linear-gradient(170deg, #ffffff, #7e4a4a);
+    height: 100vh;
+    padding: 3.5vw;
+    margin: 0;
+    display: grid;
+    grid-template-rows: 1fr 6fr;
+    grid-template-columns: 2fr 3fr;
+    gap: 2vw;
+    overflow: hidden;
+}
+
+h1 {
+    background: linear-gradient(170deg, #791111, #0d0000);
+    color: #ffffff;
+    border: solid 2px #ae5050;
+    border-radius: 10px;
+    font-size: 6vh;
+    padding: 0 5vh;
+    margin: 0;
+    box-shadow: 0 0 10px #00000095;
+    align-content: center;
+    grid-area: 1 / 1 / 2 / 3;
+    position: relative;
+    overflow: hidden;
+}
+
+input {
+    background-color: #ffa7a723;
+    color: #fff2d7;
+    border: none;
+    border-radius: 7px;
+    border-bottom: solid 2px #ffe4b1;
+    margin: 0 0.5vw;
+    font-size: 3vh;
+    font-weight: 400;
+    text-align: center;
+}
+
+input:hover {
+    border-bottom: solid 2px #cf0c0c;
+}
+
+input:focus {
+    border-bottom: solid 2px #6f0606;
+    font-weight: 400;
+    color: #6f0606;
+    outline: none;
+}
+
+input::placeholder {
+    color: #000000;
+}
+
+body > form {
+    display: flex;
+}
+
+.DataClient {
+    height: 100%;
+    background: linear-gradient(20deg, #ffe8be, #eda5a5);
+    border-radius: 10px;
+    border: solid 2px #ae5050;
+    box-shadow: 0 0 10px #00000095;
+    overflow: hidden;
+    padding: 3vh 5vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.DataClient h3 {
+    color: #6f0606;
+    font-size: 5vh;
+    margin: 0;
+    border-bottom: 2px solid;
+}
+
+.DataClient input {
+    width: 90%;
+}
+
+.DataClient .Cont {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ContDataClient {
+    padding: 2vh;
+    margin: 2vh 0;
+    font-size: 3.2vh;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 1vh;
+}
+
+.DataClient button {
+    width: 50%;
+}
+
+.FormDataMember {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2vw;
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.DataMember {
+    height: 100%;
+    background: linear-gradient(20deg, #ffe8be, #eda5a5);
+    border-radius: 10px;
+    border: solid 2px #ae5050;
+    box-shadow: 0 0 10px #00000095;
+    overflow: hidden;
+    padding: 3vh 5vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.DataMember h3 {
+    color: #6f0606;
+    font-size: 5vh;
+    margin: 0;
+    border-bottom: 2px solid;
+}
+
+.ClientId {
+    background: linear-gradient(-20deg, #eeb853, #da6969);
+    border: solid 2px #ffe4b1;
+    border-radius: 2vh;
+    padding: 2vh;
+    font-size: 4vh;
+    box-shadow: 0 0 10px #00000095;
+    margin: 4vh 0;
+    display: flex;
+    justify-content: center;
+}
+
+.ClientId {
+    color: #ffe4b1;
+}
+
+.ClientId input {
+    width: 85%;
+    font-size: 4vh;
+}
+
+.ClientId input::-webkit-outer-spin-button,
+.ClientId input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.ContPay {
+    border-radius: 2vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vh;
+}
+
+.ContPay > div {
+    background: linear-gradient(-20deg, #eeb853, #da6969);
+    border: solid 2px #ffe4b1;
+    border-radius: 2vh;
+    box-shadow: 0 0 10px #00000095;
+    width: 85%;
+    padding: 1vh;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+
+.ContPay > div h3{
+    color: #ffe4b1;
+    font-size: 2.2vh;
+    font-weight: 500;
+    margin: 0 2vh;
+    align-self: center;
+}
+
+.Insc div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Insc label {
+    font-size: 2vh;
+}
+
+.AddMonts > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.AddMonts label {
+    font-size: 2vh;
+}
+
+.AddMonts > div > div {
+    display: flex;
+    justify-content: center;
+}
+
+#Months {
+    width: 25%;
+    font-size: 2vh;
+}
+
+.Total {
+    height: 100%;
+    background: linear-gradient(-20deg, #ffe4b1, #d69595);
+    border: solid 2px #ae5050;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00000095;
+    overflow: hidden;
+    padding: 3vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+} 
+
+.Total h2 {
+    background: linear-gradient(170deg, #791111, #0d0000);
+    color: #ffe4b1;
+    border-radius: 1.5vh;
+    padding: 0 2vh;
+    margin: 0;
+    font-size: 2.8vh;
+    font-weight: 500;
+    box-shadow: 0 0 10px #00000095;
+} 
+
+.Total h3 {
+    color: #444444;
+    padding: 0 2vh;
+    margin: 0 0 2vh 0;
+    font-size: 3vh;
+    font-weight: 500;
+} 
+
+
+.Total h3 span {
+    color: #000000;
+    margin: 0;
+    font-size: 4vh;
+    font-weight: 500;
+}
+
+#TotPay {
+    font-size: 5vh;
+    font-weight: 600;
+}
+
+Button {
+    background-color: #ffe4b1;
+    color: #cf0c0c;
+    border: solid 1px #cf0c0c;
+    border-radius: 8px;
+    font-size: 3.3vh;
+    box-shadow: 0 0 10px #00000095;
+}
+
+Button:hover {
+    background-color:  #cf0c0c;
+    border: solid 1px #cf0c0c;
+    color: #ffe4b1;
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Styles/AddClientPage.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <title>Agregar Cliente / Miembro</title>
+</head>
+<body>
+    <h1 id="Title">Agregar Cliente / Miembro</h1>
+
+    <form class="FormDataClient" id="FormClient">
+        <div class="DataClient">
+            <h3>Nuevo cliente</h3>
+            <div class="Cont">
+                <div class="ContDataClient">
+                    <label for="Name">Nombre(s):</label>
+                    <input type="text" name="Name" id="Name" placeholder="- - -" autocomplete="off" required>
+                    <label for="LastName">Apellido(s):</label>
+                    <input type="text" name="LastName" id="LastName" placeholder="- - -" autocomplete="off" required>
+                    <label for="Tel">Teléfono:</label>
+                    <input type="text" name="Tel" id="Tel" placeholder="- - -" autocomplete="off" required>
+                </div>
+                <button id="BtnAddClient" type="submit">Agregar</button>
+            </div>
+        </div>
+    </form>
+
+    <form class="FormDataMember" id="FormMember">
+        <div class="DataMember">
+            <h3>Nuevo miembro</h3>
+            <div id="Data" class="ClientId">
+                <label for="Id">#</label>
+                <input type="number" name="Id" id="Id" placeholder="- - -" required>
+            </div>
+            <div class="ContPay">
+                <div class="AddMonts">
+                    <h3>Cantidad de Meses:</h3>
+                    <div>
+                        <div>
+                            <input type="number" name="Months" id="Months" placeholder="- -" required min="1">
+                            <label for="Months">Mes(es)</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="Insc">
+                    <h3>Método de Pago:</h3>
+                    <div>
+                        <input type="radio" name="MPay" id="IEfect" value="Efectivo" checked>
+                        <label for="IEfect">Efectivo</label>
+                        <input type="radio" name="MPay" id="ITras" value="Transferencia">
+                        <label for="ITras">Transferencia</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Total">
+            <div>
+                <h2>Inscripción:</h2>
+                <h3>$<span id="InscPay">- - -</span></h3>
+                <h2>Mensualidad:</h2>
+                <h3>$<span id="MonthPay">- - -</span></h3>
+                <h2>Total:</h2>
+                <h3>$<span id="TotPay">- - -</span></h3>
+            </div>
+            <button id="BtnAddMember" type="submit">Agregar</button>
+        </div>
+    </form>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const inscPayElem = document.getElementById("InscPay");
+            const monthPayElem = document.getElementById("MonthPay");
+            const totPayElem = document.getElementById("TotPay");
+            const monthsInput = document.getElementById("Months");
+
+            let inscCost = 0;
+            let monthCost = 0;
+
+            async function fetchCost(productId) {
+                const formData = new URLSearchParams();
+                formData.append('Id', productId);
+
+                const response = await fetch("../Scripts/GetProduct.php", {
+                    method: "POST",
+                    body: formData,
+                });
+                const result = await response.json();
+
+                if (result.success) {
+                    return parseFloat(result.product.precio) || 0;
+                } else {
+                    alert(result.message);
+                    return 0;
+                }
+            }
+
+            try {
+                inscCost = await fetchCost(0);
+                monthCost = await fetchCost(1);
+
+                inscPayElem.textContent = inscCost.toFixed(2);
+                monthPayElem.textContent = monthCost.toFixed(2);
+                totPayElem.textContent = (inscCost + monthCost).toFixed(2);
+            } catch (error) {
+                console.error("🛑 Error al obtener los costos:", error);
+            }
+
+            monthsInput.addEventListener('input', () => {
+                const months = parseInt(monthsInput.value) || 1;
+                const total = inscCost + (monthCost * months);
+                totPayElem.textContent = total.toFixed(2);
+            });
+
+            document.getElementById("FormClient").addEventListener("submit", async function (event) {
+                event.preventDefault();
+                const formData = new FormData(this);
+
+                try {
+                    const response = await fetch("../Scripts/AddClient.php", {
+                        method: "POST",
+                        body: formData,
+                    });
+                    const result = await response.text();
+                    alert(result);
+
+                    if (response.ok) {
+                        this.reset();
+                    }
+                } catch (error) {
+                    alert("❌ Ocurrió un error al procesar la solicitud. ❌");
+                }
+            });
+
+            document.getElementById("FormMember").addEventListener("submit", async function (event) {
+                event.preventDefault();
+                const formData = new FormData(this);
+
+                try {
+                    const response = await fetch("../Scripts/AddMember.php", {
+                        method: "POST",
+                        body: formData,
+                    });
+                    const result = await response.text();
+                    alert(result);
+
+                    if (response.ok) {
+                        this.reset();
+                        totPayElem.textContent = '- - -';
+                    }
+                } catch (error) {
+                    alert("❌ Ocurrió un error al procesar la solicitud. ❌");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

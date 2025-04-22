@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Styles/RegisterMemActivityPage.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+<body>
+
+    <h1 id="Title">Inscribir / Dar Baja Miembro a Actividad</h1>
+
+    <div class="Data">
+        
+        <form id="SearchFormActivity1" class="Search">
+            <label for="IdAct1"># Actividad</label>
+            <input type="number" name="IdAct" id="IdAct1" placeholder="- - -" autofocus required>
+            <button type="submit">Buscar</button>
+        </form>
+
+        <form id="SearchFormMember1" class="Search">
+            <label for="IdMem1"># Miembro</label>
+            <input type="number" name="IdMem" id="IdMem1" placeholder="- - -" autofocus required>
+            <button type="submit">Buscar</button>
+        </form>
+        
+        <form class="Cont" id="InscriptionForm">
+            <div class="ContData">
+                <input type="hidden" name="HActId" id="hiddenActId1">
+                <input type="hidden" name="HMemId" id="hiddenMemId1">
+                <label for="ActName1">Nombre Actividad:</label>
+                <input type="text" name="ActName1" id="ActName1" placeholder="- - -" autocomplete="off" required readonly>
+                <label for="Id1">Nombre Miembro:</label>
+                <input type="text" name="MemName1" id="MemName1" placeholder="- - -" autocomplete="off" required readonly>
+            </div>
+            <button id="BtnAddClient1" type="submit">Inscribir</button>
+        </form>
+    </div>
+   
+
+    <div class="Data">
+        
+        <form id="SearchFormActivity2" class="Search">
+            <label for="IdAct2"># Actividad</label>
+            <input type="number" name="IdAct" id="IdAct2" placeholder="- - -" autofocus required>
+            <button type="submit">Buscar</button>
+        </form>
+
+        <form id="SearchFormMember2" class="Search">
+            <label for="IdMem2"># Miembro</label>
+            <input type="number" name="IdMem" id="IdMem2" placeholder="- - -" autofocus required>
+            <button type="submit">Buscar</button>
+        </form>
+        
+        <form class="Cont" id="DelMemActForm">
+            <div class="ContData">
+                <input type="hidden" name="HActId" id="hiddenActId2">
+                <input type="hidden" name="HMemId" id="hiddenMemId2">
+                <label for="ActName2">Nombre Actividad:</label>
+                <input type="text" name="ActName2" id="ActName2" placeholder="- - -" autocomplete="off" required readonly>
+                <label for="MemName2">Nombre Miembro:</label>
+                <input type="text" name="MemName2" id="MemName2" placeholder="- - -" autocomplete="off" required readonly>
+            </div>
+            <button id="BtnAddClient2" type="submit">Dar Baja</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("SearchFormActivity1").addEventListener("submit", function (e) {
+            e.preventDefault();
+            const activityId = document.getElementById("IdAct1").value;
+
+            if (activityId) {
+                fetch("../Scripts/GetActivity.php", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                    body: "IdAct=" + encodeURIComponent(activityId)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.nombre) {
+                        document.getElementById("hiddenActId1").value = activityId;
+                        document.getElementById("ActName1").value = data.nombre;
+                    } else {
+                        alert("⚠️ Actividad no encontrada. ⚠️");
+                        document.getElementById("ActName1").value = "- - -";
+                    }
+                })
+                .catch(() => {
+                    alert("❌ Error al obtener los datos de la actividad. ❌");
+                });
+            } else {
+                alert("⚠️ Por favor, ingresa un ID de actividad válido. ⚠️");
+            }
+        });
+
+        document.getElementById("SearchFormMember1").addEventListener("submit", function (e) {
+            e.preventDefault();
+            const memberId = document.getElementById("IdMem1").value;
+
+            if (memberId) {
+                fetch("../Scripts/GetMember.php", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                    body: "IdMem=" + encodeURIComponent(memberId)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.nombreCompleto) {
+                        document.getElementById("hiddenMemId1").value = memberId;
+                        document.getElementById("MemName1").value = data.nombreCompleto;
+                    } else {
+                        alert("⚠️ Miembro no encontrado. ⚠️");
+                        document.getElementById("MemName1").value = "- - -";
+                    }
+                })
+                .catch(() => {
+                    alert("❌ Error al obtener los datos del miembro. ❌");
+                });
+            } else {
+                alert("⚠️ Por favor, ingresa un ID de miembro válido. ⚠️");
+            }
+        });
+
+        document.getElementById("InscriptionForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const actId = document.getElementById("hiddenActId1").value;
+            const memId = document.getElementById("hiddenMemId1").value;
+
+            if (!actId || !memId) {
+                alert("⚠️ Asegúrate de buscar y seleccionar una actividad y un miembro primero. ⚠️");
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append("HActId", actId);
+            formData.append("HMemId", memId);
+
+            fetch("../Scripts/RegMemberAct.php", {
+                method: "POST",
+                body: formData,
+            })
+                .then((response) => {
+                    if (!response.ok) {
+                        throw new Error("Error en la respuesta del servidor");
+                    }
+                    return response.text();
+                })
+                .then((message) => {
+                    alert(message);
+                    document.getElementById("InscriptionForm").reset();
+                })
+                .catch((error) => {
+                    console.error(error);
+                    alert("❌ Error al intentar inscribir al miembro en la actividad. ❌");
+                });
+
+        });
+
+        document.getElementById("SearchFormActivity2").addEventListener("submit", function (e) {
+        e.preventDefault();
+        const activityId = document.getElementById("IdAct2").value;
+
+        if (activityId) {
+            fetch("../Scripts/GetActivity.php", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: "IdAct=" + encodeURIComponent(activityId)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.nombre) {
+                    document.getElementById("hiddenActId2").value = activityId;
+                    document.getElementById("ActName2").value = data.nombre;
+                } else {
+                    alert("⚠️ Actividad no encontrada. ⚠️");
+                    document.getElementById("ActName2").value = "- - -";
+                }
+            })
+            .catch(() => {
+                alert("❌ Error al obtener los datos de la actividad. ❌");
+            });
+        } else {
+            alert("⚠️ Por favor, ingresa un ID de actividad válido. ⚠️");
+        }
+    });
+
+        document.getElementById("SearchFormMember2").addEventListener("submit", function (e) {
+            e.preventDefault();
+            const memberId = document.getElementById("IdMem2").value;
+
+            if (memberId) {
+                fetch("../Scripts/GetMember.php", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                    body: "IdMem=" + encodeURIComponent(memberId)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.nombreCompleto) {
+                        document.getElementById("hiddenMemId2").value = memberId;
+                        document.getElementById("MemName2").value = data.nombreCompleto;
+                    } else {
+                        alert("⚠️ Miembro no encontrado. ⚠️");
+                        document.getElementById("MemName2").value = "- - -";
+                    }
+                })
+                .catch(() => {
+                    alert("❌ Error al obtener los datos del miembro. ❌");
+                });
+            } else {
+                alert("⚠️ Por favor, ingresa un ID de miembro válido. ⚠️");
+            }
+        });
+
+        document.getElementById("DelMemActForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const actId = document.getElementById("hiddenActId2").value;
+            const memId = document.getElementById("hiddenMemId2").value;
+
+            if (!actId || !memId) {
+                alert("⚠️ Asegúrate de buscar y seleccionar una actividad y un miembro primero. ⚠️");
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append("HActId", actId);
+            formData.append("HMemId", memId);
+
+            fetch("../Scripts/DelMemberAct.php", {
+                method: "POST",
+                body: formData,
+            })
+                .then((response) => {
+                    if (!response.ok) {
+                        throw new Error("Error en la respuesta del servidor");
+                    }
+                    return response.text();
+                })
+                .then((message) => {
+                    alert(message);
+                    document.getElementById("DelMemActForm").reset();
+                })
+                .catch((error) => {
+                    console.error(error);
+                    alert("❌ Error al intentar dar de baja al miembro de la actividad. ❌");
+                });
+        });
+
+    </script>
+
+</body>
+</html>

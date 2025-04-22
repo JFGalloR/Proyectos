@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Styles/ProfitsPage.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+<body>
+
+    <h1 id="Title">Corte de Caja</h1>
+
+    <div class="Data">
+        <div class="Cont">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Hora</th>
+                        <th>Producto</th>
+                        <th>Cantidad</th>
+                        <th>Método</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody id="Sells">
+                </tbody>
+            </table>
+
+            <br>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Total Efectivo</th>
+                        <th>Total Transferencia</th>
+                    </tr>
+                </thead>
+                <tbody id="Balance">
+                    <tr>
+                        <td id="TotalEfectivo">$0.00</td>
+                        <td id="TotalTransferencia">$0.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sellsTable = document.getElementById("Sells");
+            const totalEfectivo = document.getElementById("TotalEfectivo");
+            const totalTransferencia = document.getElementById("TotalTransferencia");
+
+            fetch('../Scripts/GetSales.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    let efectivo = 0;
+                    let transferencia = 0;
+
+                    if (data.ventas[0].fecha_operacion === "No hay registros") {
+                        const row = document.createElement("tr");
+                        row.innerHTML = `
+                            <td colspan="5" style="text-align: center;">*** No hay registros ***</td>
+                        `;
+                        sellsTable.appendChild(row);
+                    } else {
+                        data.ventas.forEach(sell => {
+                            const total = parseFloat(sell.total) || 0;
+
+                            const fecha = new Date(sell.fecha_operacion); 
+                            const hora = fecha.getHours().toString().padStart(2, '0');
+                            const minuto = fecha.getMinutes().toString().padStart(2, '0');
+                            const horaFormateada = `${hora}:${minuto}`;
+
+                            const row = document.createElement("tr");
+                            row.innerHTML = `
+                                <td>${horaFormateada}</td>
+                                <td>${sell.nombre}</td>
+                                <td>${sell.cantidad}</td>
+                                <td>${sell.tipo_pago}</td>
+                                <td>$${total.toFixed(2)}</td>
+                            `;
+                            sellsTable.appendChild(row);
+
+                            if (sell.tipo_pago === "Efectivo") {
+                                efectivo += total;
+                            } else if (sell.tipo_pago === "Transferencia") {
+                                transferencia += total;
+                            }
+                        });
+                    }
+
+                    totalEfectivo.textContent = `$${efectivo.toFixed(2)}`;
+                    totalTransferencia.textContent = `$${transferencia.toFixed(2)}`;
+                } else {
+                    alert("⚠️ No se pudieron cargar las ventas. ⚠️");
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('⚠️ Error al obtener las ventas. ⚠️');
+            });
+        });
+    </script>
+
+</body>
+</html>

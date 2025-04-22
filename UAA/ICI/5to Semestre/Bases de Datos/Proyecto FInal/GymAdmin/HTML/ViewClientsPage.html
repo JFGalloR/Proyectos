@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Styles/ViewClientsPage.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+<body>
+
+    <h1 id="Title">Ver Clientes</h1>
+
+    <div class="Data">
+        <div>
+            
+        </div>
+        <div class="Cont">
+            <table>
+                <thead id="TableHeader">
+                    <!-- Los encabezados serán cargados aquí por JavaScript -->
+                </thead>
+                <tbody id="TableBody">
+                    <!-- El contenido será cargado aquí por JavaScript -->
+                </tbody>
+            </table>
+        </div>
+        <div class="InputCont">
+            <input type="radio" name="TMod" id="TCli" checked><label for="TCli">Ver Clientes</label>
+            <input type="radio" name="TMod" id="TMem"><label for="TMem">Ver Miembros</label>    
+        </div>
+    </div>
+   
+    <script>
+        function updateTableHeader(isClient) {
+            const header = document.getElementById("TableHeader");
+            header.innerHTML = '';
+
+            if (isClient) {
+                header.innerHTML = `
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Apellidos</th>
+                        <th>Teléfono</th>
+                        <th>Fecha Registro</th>
+                    </tr>
+                `;
+            } else {
+                header.innerHTML = `
+                    <tr>
+                        <th>ID Cliente</th>
+                        <th>ID Miembro</th>
+                        <th>Fecha Inicio</th>
+                        <th>Fecha Vencimiento</th>
+                    </tr>
+                `;
+            }
+        }
+
+        function loadClients() {
+            fetch("../Scripts/GetClients.php")
+            .then(response => response.json())
+            .then(data => {
+                const tableBody = document.getElementById("TableBody");
+                tableBody.innerHTML = '';
+
+                if (data.length === 0) {
+                    const row = document.createElement("tr");
+                    row.innerHTML = `
+                        <td colspan="5" style="text-align: center;">*** No hay registros ***</td>
+                    `;
+                    tableBody.appendChild(row);
+                } else {
+                    data.forEach(client => {
+                        const row = document.createElement("tr");
+                        row.innerHTML = `
+                            <td>${client.id_cliente}</td>
+                            <td>${client.nombre}</td>
+                            <td>${client.apellido}</td>
+                            <td>${client.telefono}</td>
+                            <td>${client.fecha_registro}</td>
+                        `;
+                        tableBody.appendChild(row);
+                    });
+                }
+            })
+            .catch(error => console.error("Error al cargar los clientes:", error));
+        }
+
+        function loadMembers() {
+            fetch("../Scripts/GetMembers.php")
+            .then(response => response.json())
+            .then(data => {
+                const tableBody = document.getElementById("TableBody");
+                tableBody.innerHTML = '';
+
+                if (data.length === 0) {
+                    const row = document.createElement("tr");
+                    row.innerHTML = `
+                        <td colspan="4" style="text-align: center;">*** No hay registros ***</td>
+                    `;
+                    tableBody.appendChild(row);
+                } else {
+                    data.forEach(member => {
+                        const row = document.createElement("tr");
+                        row.innerHTML = `
+                            <td>${member.id_cliente}</td>
+                            <td>${member.id_miembro}</td>
+                            <td>${member.fecha_inicio}</td>
+                            <td>${member.fecha_vencimiento}</td>
+                        `;
+                        tableBody.appendChild(row);
+                    });
+                }
+            })
+            .catch(error => console.error("Error al cargar los miembros:", error));
+        }
+
+        document.getElementById("TCli").addEventListener("change", function() {
+            if (this.checked) {
+                updateTableHeader(true);
+                loadClients();
+            }
+        });
+
+        document.getElementById("TMem").addEventListener("change", function() {
+            if (this.checked) {
+                updateTableHeader(false);
+                loadMembers();
+            }
+        });
+
+        updateTableHeader(true);
+        loadClients();
+    </script>
+</body>
+</html>

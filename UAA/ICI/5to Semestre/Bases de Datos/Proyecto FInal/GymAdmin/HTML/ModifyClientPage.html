@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Styles/ModifyCLientPage.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+<body>
+
+    <h1 id="Title">Modificar Cliente</h1>
+
+    <div class="Data">
+
+        <form id="searchForm" class="ClientId" method="POST">
+            <label for="Id"># Cliente</label>
+            <input type="number" name="Id" id="Id" placeholder="- - -" autofocus required>
+            <button type="submit">Buscar</button>
+        </form>
+        
+        <form id="updateForm" class="Cont" method="POST">
+            <div class="ClientData">
+                <input type="hidden" name="Id" id="hiddenId">
+                <label for="Name">Nombre(s):</label>
+                <input type="text" name="Name" id="Name" placeholder="- - -" autocomplete="off" required readonly>
+                <label for="LastName">Apellido(s):</label>
+                <input type="text" name="LastName" id="LastName" placeholder="- - -" autocomplete="off" required readonly>
+                <label for="Tel">Teléfono:</label>
+                <input type="text" name="Tel" id="Tel" placeholder="- - -" autocomplete="off" required readonly>
+            </div>
+            <button id="BtnMod" type="submit" disabled>Modificar</button>
+        </form>        
+
+    </div>
+    <script>
+        document.getElementById("searchForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+    
+            var clientId = document.getElementById("Id").value;
+    
+            if (clientId) {
+                fetch("../Scripts/GetClient.php", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/x-www-form-urlencoded"
+                    },
+                    body: "Id=" + clientId
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error("Error en la respuesta del servidor");
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    if (data.nombre) {
+                        document.getElementById("hiddenId").value = clientId;
+                        document.getElementById("Name").value = data.nombre;
+                        document.getElementById("LastName").value = data.apellido;
+                        document.getElementById("Tel").value = data.telefono;
+    
+                        document.getElementById("Name").readOnly = false;
+                        document.getElementById("LastName").readOnly = false;
+                        document.getElementById("Tel").readOnly = false;
+    
+                        document.getElementById("BtnMod").disabled = false;
+                    } else {
+                        alert("⚠️ Cliente no encontrado. ⚠️");
+                    }
+                })
+                .catch(error => {
+                    console.error(error);
+                    alert("❌ Error al obtener los datos. ❌");
+                });
+            } else {
+                alert("⚠️ Por favor, ingresa un ID de cliente válido. ⚠️");
+            }
+        });
+
+    
+        document.getElementById("updateForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            var formData = new FormData(this);
+
+            fetch("../Scripts/UpdateClient.php", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Error en la respuesta del servidor");
+                }
+                return response.text();
+            })
+            .then(data => {
+                alert(data);
+
+                document.getElementById("updateForm").reset();
+
+                document.getElementById("Name").readOnly = true;
+                document.getElementById("LastName").readOnly = true;
+                document.getElementById("Tel").readOnly = true;
+
+                document.getElementById("BtnMod").disabled = true;
+            })
+            .catch(error => {
+                console.error(error);
+                alert("❌ Error al modificar el cliente. ❌");
+            });
+        });
+    </script>
+</body>
+</html>

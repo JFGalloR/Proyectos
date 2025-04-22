@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Styles/ActivityManagement.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+<body>
+
+    <h1 id="Title">Gestión de Actividades / Instructor</h1>
+
+    <form class="FormDataActivity" id="FormAct">
+        <div class="DataActivity">
+
+            <h3>Nueva actividad</h3>
+            
+            <div class="Cont">
+                <div class="ContDataActivity">
+                    <label for="Name">Nombre:</label>
+                    <input type="text" name="Name" id="Name" placeholder="- - -" autocomplete="off" required>
+                    <label for="Id">ID Instructor:</label>
+                    <input type="text" name="Id" id="Id" placeholder="- - -" autocomplete="off" required>
+                    <label class="Days">Días de clases:</label>
+                    <div>
+                    <label for="M">L</label>
+                    <label for="M">M</label>
+                    <label for="M">M</label>
+                    <label for="M">J</label>
+                    <label for="M">V</label>
+                    <label for="M">S</label>
+                    <label for="M">D</label>
+                    <input type="checkbox" name="M" id="M" value="1">
+                    <input type="checkbox" name="T" id="T" value="2">
+                    <input type="checkbox" name="W" id="W" value="3">
+                    <input type="checkbox" name="Tr" id="Tr" value="4">
+                    <input type="checkbox" name="F" id="F" value="5">
+                    <input type="checkbox" name="S" id="S" value="6">
+                    <input type="checkbox" name="Su" id="Su" value="7">
+                    </div>
+                    <label for="H_Start">Hora inicio:</label>
+                    <input type="time" name="H_Start" id="H_Start" placeholder="- - -" autocomplete="off" required>
+                    <label for="H_End">Hora final:</label>
+                    <input type="time" name="H_End" id="H_End" placeholder="- - -" autocomplete="off" required>
+                </div>
+                <button id="BtnAddClient" type="submit">Agregar</button>
+            </div>
+     
+        </div>
+    </form>
+    
+    <form class="FormDataInstructor" id="FormInstructor">
+        <div class="DataInstructor">
+
+            <h3>Nuevo instructor</h3>
+    
+            <div class="Cont">
+                <div class="ContDataInstructor">
+                    <label for="Name">Nombre(s):</label>
+                    <input type="text" name="Name" id="Name" placeholder="- - -" autocomplete="off" required>
+                    <label for="LastName">Apellido(s):</label>
+                    <input type="text" name="LastName" id="LastName" placeholder="- - -" autocomplete="off" required>
+                    <label for="Tel">Teléfono:</label>
+                    <input type="text" name="Tel" id="Tel" placeholder="- - -" autocomplete="off" required>
+                    <label for="Tel">RFC:</label>
+                    <input type="text" name="RFC" id="RFC" placeholder="- - -" autocomplete="off" required>
+                </div>
+                <button id="BtnAddClient" type="submit">Agregar</button>
+            </div>
+            
+        </div>
+    </form>
+   
+    <script>
+        document.getElementById("FormInstructor").addEventListener("submit", async function (event) {
+        event.preventDefault();
+
+        const formData = new FormData(this);
+
+        try {
+            const response = await fetch("../Scripts/AddInstructor.php", {
+                method: "POST",
+                body: formData
+            });
+
+            const result = await response.text();
+            alert(result);
+
+            if (response.ok) {
+                this.reset();
+            }
+        } catch (error) {
+            alert("❌ Ocurrió un error al procesar la solicitud. ❌");
+        }
+    });
+
+    document.getElementById("FormAct").addEventListener("submit", async function (event) {
+        event.preventDefault();
+
+        const formData = new FormData(this);
+
+        try {
+            const response = await fetch("../Scripts/AddActivity.php", {
+                method: "POST",
+                body: formData
+            });
+
+            const result = await response.text();
+            alert(result);
+
+            if (response.ok) {
+                this.reset();
+            }
+        } catch (error) {
+            alert("❌ Ocurrió un error al procesar la solicitud. ❌");
+        }
+    });
+
+    </script>
+
+</body>
+</html>

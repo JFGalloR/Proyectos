@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Styles/ScanMemberPage.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/es.min.js"></script>
+</head>
+<script>moment.locale('es');</script>
+<body>
+
+    <div class="Scanner">
+        <h2>Ingresa el código de membresía:</h2>
+        <form method="POST" id="Search">
+            <label for="Code">#</label>
+            <input type="hidden" name="MemId" id="MemId">
+            <input id="Code" name="Code" type="number" placeholder=" - - -" autofocus required>
+            <button type="submit" id="GetMem">Obtener Datos</button>
+        </form>
+    </div>
+
+    <div class="Init">
+        <div>
+            <span class="material-symbols-outlined">account_circle</span>
+            <h1>Escanea una membresía<br>o introduce su código<br>de miembro...</h1>
+        </div>
+    </div>
+
+    <div class="Member">
+        <div class="Data">
+            <h2 id="Name"> - - - </h2>
+            <h2 id="Membership"># - - - </h2>
+            <h2 class="SubTitle">Miembro desde:</h2>
+            <h2 id="Since"> - - - </h2>
+        </div>
+
+        <div class="ManageMem">
+            <div class="Green" id="Validation">
+                <div class="Icon">
+                    <span class="material-symbols-outlined" id="Passed">check_circle</span>
+                    <span class="material-symbols-outlined" id="Warning">error</span>
+                    <span class="material-symbols-outlined" id="NoPassed">warning</span>    
+                </div>
+                <div>
+                    <h2 class="GreenTit" id="ValText"> - - - </h2>
+                    <h2 class="ValInfo">
+                        <h3 id="ValSubText"> - - - </h3>
+                        <h3 id="ValDate"> - - - </h3>
+                    </h2>
+                </div>
+            </div>
+
+            <form id="AddMonths">
+                <h2>Agregar meses a membresía:</h2>
+                <input type="hidden" name="MemId" id="MemIdAddMonths"> <!-- Hidden input for MemId -->
+                
+                <div class="ContInput">
+                    <div>
+                        <input type="number" name="Months" id="Months" placeholder="- -" required min="1"><label for="Months">Mes(es)</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="Pay" id="Cash" value="Efectivo" checked><label for="Efec">Efectivo</label>
+                        <input type="radio" name="Pay" id="Card" value="Transferencia"><label for="Transf">Transferencia</label>
+                    </div>
+                </div>
+
+                <div class="Payment">
+                    <h3>Total:</h3>
+                    <h4 class="Total">$<span class="Tot" id="Total"> - - - </span></h4>
+                </div>
+
+                <button id="AddMon">Agregar</button>
+            </form>
+        </div>
+
+        <button id="Cont"></button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const monthsInput = document.getElementById("Months");
+            const totalElem = document.getElementById("Total");
+
+            let productPrice = 0;
+            let memberId = null;
+
+            async function fetchProductPrice(productId) {
+                const formData = new URLSearchParams();
+                formData.append('Id', productId);
+
+                const response = await fetch("../Scripts/GetProduct.php", {
+                    method: "POST",
+                    body: formData,
+                });
+                const result = await response.json();
+
+                if (result.success) {
+                    return parseFloat(result.product.precio) || 0;
+                } else {
+                    alert(result.message);
+                    return 0;
+                }
+            }
+
+            async function updateTotal() {
+                try {
+                    productPrice = await fetchProductPrice(1);
+                    const months = parseInt(monthsInput.value) || 1;
+                    const total = productPrice * months;
+                    totalElem.textContent = total.toFixed(2);
+                } catch (error) {
+                    console.error("Error al obtener el precio:", error);
+                }
+            }
+
+            monthsInput.addEventListener('input', updateTotal);
+
+            updateTotal();
+
+            document.getElementById('Search').addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                const code = document.getElementById('Code').value;
+
+                document.querySelector('.Init').style.display = 'flex';
+                document.querySelector('.Member').style.display = 'none';
+
+                fetch('../Scripts/ScanMember.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    },
+                    body: `Code=${encodeURIComponent(code)}`
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.error) {
+                        alert(data.error);
+                    } else {
+                        document.querySelector('.Init').style.display = 'none';
+                        document.querySelector('.Member').style.display = 'grid';
+
+                        document.getElementById('Name').textContent = `${data.nombre} ${data.apellido}`;
+                        document.getElementById('Membership').textContent = `# ${code}`;
+                        document.getElementById('Since').textContent = moment(data.fecha_registro).format('LL');
+                        document.getElementById('ValSubText').textContent = `Inicio: ${moment(data.fecha_inicio).format('LL')}`;
+
+                        const fechaVencimiento = moment(data.fecha_vencimiento);
+                        const fechaActual = moment();
+                        const diasRestantes = fechaVencimiento.diff(fechaActual, 'days');
+
+                        const validationText = document.getElementById('ValText');
+                        const validationIcons = document.querySelectorAll('.material-symbols-outlined');
+                        const passedIcon = document.getElementById('Passed');
+                        const warningIcon = document.getElementById('Warning');
+                        const noPassedIcon = document.getElementById('NoPassed');
+                        const validationDiv = document.getElementById('Validation');
+                        const validationTitle = document.getElementById('ValText');
+
+                        if (diasRestantes > 5) {
+                            validationText.textContent = 'Membresía válida';
+                            validationDiv.classList.remove('Yellow', 'Red');
+                            validationDiv.classList.add('Green');
+                            validationTitle.classList.remove('YellowTit', 'RedTit');
+                            validationTitle.classList.add('GreenTit');
+                            passedIcon.style.display = 'inline';
+                            warningIcon.style.display = 'none';
+                            noPassedIcon.style.display = 'none';
+                            document.getElementById('ValDate').textContent = `Vence: ${moment(data.fecha_vencimiento).format('LL')}`;
+                        } else if (diasRestantes > 0 && diasRestantes <= 5) {
+                            validationText.textContent = 'Membresía por vencer';
+                            validationDiv.classList.remove('Green', 'Red');
+                            validationDiv.classList.add('Yellow');
+                            validationTitle.classList.remove('GreenTit', 'RedTit');
+                            validationTitle.classList.add('YellowTit');
+                            passedIcon.style.display = 'none';
+                            warningIcon.style.display = 'inline';
+                            noPassedIcon.style.display = 'none';
+                            document.getElementById('ValDate').textContent = `Vence: ${moment(data.fecha_vencimiento).format('LL')}`;
+                        } else {
+                            validationText.textContent = 'Membresía expirada';
+                            validationDiv.classList.remove('Green', 'Yellow');
+                            validationDiv.classList.add('Red');
+                            validationTitle.classList.remove('GreenTit', 'YellowTit');
+                            validationTitle.classList.add('RedTit');
+                            passedIcon.style.display = 'none';
+                            warningIcon.style.display = 'none';
+                            noPassedIcon.style.display = 'inline';
+                            document.getElementById('ValDate').textContent = `Venció: ${moment(data.fecha_vencimiento).format('LL')}`;
+                        }
+
+                        memberId = code;
+                        document.getElementById("MemId").value = memberId;
+                        document.getElementById("MemIdAddMonths").value = memberId;
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('❌ Hubo un problema al obtener los datos. ❌');
+
+                    document.querySelector('.Init').style.display = 'flex';
+                    document.querySelector('.Member').style.display = 'none';
+                });
+            });
+
+            document.getElementById('AddMonths').addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                const months = parseInt(monthsInput.value) || 1;
+                const total = parseFloat(totalElem.textContent);
+                const paymentType = document.querySelector('input[name="Pay"]:checked').value;
+
+                document.querySelector('.Init').style.display = 'flex';
+                document.querySelector('.Member').style.display = 'none';
+
+                fetch('../Scripts/AddMonths.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    },
+                    body: `id_miembro=${memberId}&total=${total}&tipo_pago=${paymentType}&productos=[{"id_producto":1,"cantidad":${months},"precio":${productPrice}}]&meses=${months}`
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert('✅ Meses añadidos con éxito. ✅');
+                        document.getElementById("MemId").value = memberId;
+                        document.getElementById("GetMem").click(); 
+                        this.reset();
+                        updateTotal();
+                    } else {
+                        alert('❌ Error al realizar la compra. ❌');
+                    }
+
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('❌ Hubo un problema al agregar los meses. ❌');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

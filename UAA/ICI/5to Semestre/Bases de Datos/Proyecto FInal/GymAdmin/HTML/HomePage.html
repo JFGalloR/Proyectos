@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Styles/HomePage.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+<body>
+
+    <div class="Date">
+        <span class="material-symbols-outlined">work_history</span>
+            <h3 id="Hour">00:00</h3>
+            <h4 id="Date">1 de Enero de 2000</h4>
+    </div>
+
+    <div class="StatsMembers">
+        <span class="material-symbols-outlined">groups</span>
+        <h3>Miembros registrados:</h3>
+        <h4 id="MemReg">0</h4>
+        <h3>Miembros ingresados hoy:</h3>
+        <h4 id="MemIn">0</h4>
+    </div>
+
+    <div class="StatsSells">
+        <span class="material-symbols-outlined">payments</span>
+        <h3>Acumulado en inventario:</h3>
+        <h4 id="SellInv">$0.00</h4>
+        <h3>Vendido hoy:</h3>
+        <h4 id="SellTdy">$0.00</h4>
+    </div>
+
+    <div class="MemPrices">
+        <span class="material-symbols-outlined">badge</span>
+        <h3>Precio de inscripción:</h3>
+        <h4 id="InsPrice">$0.00</h4>
+        <h3>Precio de mensualidad:</h3>
+        <h4 id="MonPrice">$0.00</h4>
+    </div>
+
+    <div class="ModMemPrices">
+        <span class="material-symbols-outlined"> request_quote</span>
+        <h3>Modificar precio de inscripción:</h3>
+        <label>$</label><input id="Insc" type="number" placeholder=" - - -">
+        <button id="ModInsc">Modificar</button>
+        <h3>Modificar precio de mensualidad:</h3>
+        <label>$</label><input id="Month" type="number" placeholder=" - - -">
+        <button id="ModMonth">Modificar</button>
+    </div>
+
+    <div class="Notes">
+        <h1>Gym</h1>
+        <h2>Admin</h2>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js"></script>
+    <script src="../Scripts/HomePage.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            fetch('../Scripts/Api.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: 'action=getDatos'
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('MemReg').textContent = data.totalMiembros;
+                document.getElementById('MemIn').textContent = data.miembrosHoy;
+                document.getElementById('SellInv').textContent = `$${data.acumuladoInventario.toFixed(2)}`;
+                document.getElementById('SellTdy').textContent = `$${data.vendidoHoy.toFixed(2)}`;
+                document.getElementById('InsPrice').textContent = `$${data.precioInscripcion.toFixed(2)}`;
+                document.getElementById('MonPrice').textContent = `$${data.precioMensualidad.toFixed(2)}`;
+            })
+            .catch(error => {
+                console.error('Error al cargar los datos:', error);
+            });
+        });
+
+        document.getElementById('ModInsc').addEventListener('click', () => {
+            const nuevoPrecioInscripcion = document.getElementById('Insc').value;
+            document.getElementById('Insc').value = '';
+
+            if (nuevoPrecioInscripcion === '') {
+                alert('❌ El precio no puede estar vacío. ❌');
+                return;
+            }
+
+            fetch('../Scripts/api.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: `action=modificarPrecio&idProducto=0&nuevoPrecio=${nuevoPrecioInscripcion}`
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('✅ Precio de inscripción actualizado ✅');
+                    // Aplicar .toFixed(2) al actualizar el precio mostrado
+                    document.getElementById('InsPrice').textContent = `$${parseFloat(nuevoPrecioInscripcion).toFixed(2)}`;
+                } else {
+                    alert(`❌ Error: ${data.message} ❌`);
+                }
+            })
+            .catch(error => {
+                console.error('Error al actualizar el precio:', error);
+                alert('❌ Hubo un problema al actualizar el precio. ❌');
+            });
+        });
+
+        document.getElementById('ModMonth').addEventListener('click', () => {
+            const nuevoPrecioMensualidad = document.getElementById('Month').value;
+            document.getElementById('Month').value = '';
+
+            if (nuevoPrecioMensualidad === '') {
+                alert('❌ El precio no puede estar vacío. ❌');
+                return;
+            }
+
+            fetch('../Scripts/api.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: `action=modificarPrecio&idProducto=1&nuevoPrecio=${nuevoPrecioMensualidad}`
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('✅ Precio de mensualidad actualizado ✅');
+                    // Aplicar .toFixed(2) al actualizar el precio mostrado
+                    document.getElementById('MonPrice').textContent = `$${parseFloat(nuevoPrecioMensualidad).toFixed(2)}`;
+                } else {
+                    alert(`❌ Error: ${data.message} ❌`);
+                }
+            })
+            .catch(error => {
+                console.error('Error al actualizar el precio:', error);
+                alert('❌ Hubo un problema al actualizar el precio. ❌');
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: 'Kanit', sans-serif;
+    box-sizing: border-box;
+    transition: all 0.2s;
+}
+
+body {
+    background: linear-gradient(170deg, #ffffff, #7e4a4a);
+    height: 100vh;
+    padding: 3.5vw;
+    margin: 0;
+    display: grid;
+    grid-template-rows: 1fr 6fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 2vw;
+    overflow: hidden;
+}
+
+h1 {
+    background: linear-gradient(170deg, #791111, #0d0000);
+    color: #ffffff;
+    border: solid 2px #ae5050;
+    border-radius: 10px;
+    font-size: 6vh;
+    padding: 0 5vh;
+    margin: 0;
+    box-shadow: 0 0 10px #00000095;
+    align-content: center;
+    grid-area: 1 / 1 / 2 / 3;
+    position: relative;
+    overflow: hidden;
+}
+
+input {
+    background-color: #ffa7a723;
+    color: #fff2d7;
+    border: none;
+    border-radius: 7px;
+    border-bottom: solid 2px #ffe4b1;
+    margin: 0 0.5vw;
+    font-size: 3vh;
+    font-weight: 400;
+    text-align: center;
+}
+
+input:hover {
+    border-bottom: solid 2px #cf0c0c;
+}
+
+input:focus {
+    border-bottom: solid 2px #6f0606;
+    font-weight: 400;
+    color: #6f0606;
+    outline: none;
+}
+
+input::placeholder {
+    color: #000000;
+}
+
+body > form {
+    display: flex;
+}
+
+.Data {
+    background: linear-gradient(20deg, #ffe8be, #eda5a5);
+    border-radius: 10px;
+    border: solid 2px #ae5050;
+    box-shadow: 0 0 10px #00000095;
+    overflow: hidden;
+    padding: 3vh 5vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.Data h3 {
+    color: #6f0606;
+    font-size: 5vh;
+    margin: 0;
+    border-bottom: 2px solid;
+}
+
+.Data input {
+    width: 90%;
+}
+
+.DataCont {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.Data .Cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Cont {
+    flex: 1;
+}
+
+.ContDataInput {
+    padding: 2vh;
+    margin: 2vh 0;
+    font-size: 3.2vh;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 1vh;
+}
+
+.Cont > button {
+    width: 50%;
+}
+
+.FormDataMember {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2vw;
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.DataMember {
+    height: 100%;
+    background: linear-gradient(20deg, #ffe8be, #eda5a5);
+    border-radius: 10px;
+    border: solid 2px #ae5050;
+    box-shadow: 0 0 10px #00000095;
+    overflow: hidden;
+    padding: 3vh 5vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.DataMember h3 {
+    color: #6f0606;
+    font-size: 5vh;
+    margin: 0;
+    border-bottom: 2px solid;
+}
+
+.Search {
+    background: linear-gradient(-20deg, #eeb853, #da6969);
+    width: 100%;
+    border: solid 2px #ffe4b1;
+    border-radius: 2vh;
+    padding: 2vh;
+    font-size: 3.5vh;
+    box-shadow: 0 0 10px #00000095;
+    margin: 2vh 0;
+    display: flex;
+    justify-content: center;
+}
+
+.Search {
+    color: #ffe4b1;
+}
+
+.Search label {
+    align-self: center;
+}
+
+.Search input {
+    width: 22vw;
+    font-size: 3.5vh;
+}
+
+.Search input::-webkit-outer-spin-button,
+.Search input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.Search button {
+    font-size: 3vh;
+}
+
+
+.ContPay {
+    border-radius: 2vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vh;
+}
+
+.ContPay > div {
+    background: linear-gradient(-20deg, #eeb853, #da6969);
+    border: solid 2px #ffe4b1;
+    border-radius: 2vh;
+    box-shadow: 0 0 10px #00000095;
+    width: 85%;
+    padding: 1vh;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+
+.ContPay > div h3{
+    color: #ffe4b1;
+    font-size: 2.2vh;
+    font-weight: 500;
+    margin: 0 2vh;
+    align-self: center;
+}
+
+.Insc div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Insc label {
+    font-size: 2vh;
+}
+
+.AddMonts > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.AddMonts label {
+    font-size: 2vh;
+}
+
+.AddMonts > div > div {
+    display: flex;
+    justify-content: center;
+}
+
+#Months {
+    width: 25%;
+    font-size: 2vh;
+}
+
+Button {
+    background-color: #ffe4b1;
+    color: #cf0c0c;
+    border: solid 1px #cf0c0c;
+    border-radius: 8px;
+    font-size: 3.3vh;
+    box-shadow: 0 0 10px #00000095;
+}
+
+Button:hover {
+    background-color:  #cf0c0c;
+    border: solid 1px #cf0c0c;
+    color: #ffe4b1;
+}

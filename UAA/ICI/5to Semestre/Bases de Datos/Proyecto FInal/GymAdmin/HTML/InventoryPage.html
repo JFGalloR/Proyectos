@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Styles/InventoryPage.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+<body>
+
+    <h1 id="Title">Inventario</h1>
+
+    <div class="Data">
+        <div class="Cont">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                    </tr>
+                </thead>
+                <tbody id="productsTableBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const membersTableBody = document.getElementById("productsTableBody");
+
+            // Fetch products from the server
+            fetch('../Scripts/GetProducts.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    data.products.forEach(product => {
+                        // Create a new row for each product
+                        const row = document.createElement("tr");
+                        row.innerHTML = `
+                            <td>${product.id_producto}</td>
+                            <td>${product.nombre}</td>
+                            <td>$${product.precio.toFixed(2)}</td>
+                            <td>${product.stock}</td>
+                        `;
+                        membersTableBody.appendChild(row);
+                    });
+                } else {
+                    alert("⚠️ No se pudieron cargar los productos. ⚠️");
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('⚠️ Error al obtener los productos. ⚠️');
+            });
+        });
+    </script>
+
+</body>
+</html>

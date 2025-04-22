@@ -1,0 +1,309 @@
+* {
+    font-family: "Exo", sans-serif;
+    box-sizing: border-box;
+    transition: all 0.3s;
+}
+
+body {
+    background: linear-gradient(155deg, #000000, #151515);
+    margin: 0;
+}
+
+.ContTitulo {
+    background: linear-gradient(180deg, #151515, #00000000);
+    border: solid 2px #404040;
+    border-bottom: none;
+    border-left: none;
+    border-radius: 8px 8px 0 0;
+    width: 700px;
+    margin: 7vh 10vw 3vh 10vw ;
+    display: flex;
+    overflow: visible;
+}
+
+.Barra {
+    background: linear-gradient(180deg, #ffffff, #151515);
+    border-radius: 8px 0 0 0;
+    width: 20px;
+    height: 215px;
+    margin-right: 25px;
+    display: inline-block;
+    box-shadow: 0 0 50px #000000;
+}
+
+.Titulo {
+    color: #ededed;
+    margin: 10px 0 0 0;
+    font-size: 3.5em;
+    font-weight: 800;
+    text-shadow: 0 0 8px #000000;
+    overflow: visible;
+}
+
+.Subtitulo {
+    color: #8f8f8f;
+    margin: 0;
+    font-family: "Exo 2", sans-serif;
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+.Descripcion {
+    background-color: #202020;
+    color: #ffffff;
+    border: solid 1px #404040;
+    border-radius: 8px;
+    margin: 5vh 10vw 3vh 10vw;
+    padding: 15px;
+    text-align: justify;
+    box-shadow: 0 0 50px #000000;
+    overflow: visible;
+}
+
+.Descripcion h3, p{
+    margin: 0;
+}
+
+.Descripcion p {
+    color: #bababa;
+    font-family: "Exo 2", sans-serif;
+    font-size: 0.9em;
+}
+
+.TitReq {
+    background-color: #202020;
+    color: #ffffff;
+    border: solid 1px #404040;
+    border-radius: 8px;
+    margin: 0 10vw;
+    padding: 15px;
+    text-align: justify;
+    box-shadow: 0 0 50px #000000;
+    overflow: visible;
+}
+
+.TitReq h3 {
+    margin: 0;
+}
+
+.BarraReq {
+    height: 40px;
+    margin: 0 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+}
+
+.BarraReq button {
+    background-color: #101010;
+    color: #6c6c6c;
+    border: solid 1px #2f2f2f;
+    border-radius: 1.35em;
+    width: 2.7em;
+    height: 1.5em;
+    margin: 0 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 0.8em;
+    box-shadow: 0 0 10px #000000;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.BarraReq button:hover {
+    background-color: #444444;
+    transform: translateY(-2px);
+}
+
+.Cont {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+}
+
+.Req {
+    background: linear-gradient(135deg, #000000, #202020);
+    color: #ffffff;
+    border: solid 1px #404040;
+    border-radius: 8px;
+    margin: 0 10vw 5vh 10vw;
+    text-align: justify;
+    box-shadow: 0 0 5px #000000;
+    position: relative;
+}
+
+.NumReq {
+    color: #0b0b0b;
+    width: 1em;
+    margin: 0;
+    font-size: 9em;
+    font-weight: 900;
+    text-shadow: 0 0 100px #ffffff;
+    text-align: center;
+    display: inline-block;
+    overflow: visible;
+    position: relative;
+    top: -40px;
+}
+
+.TituloReq {
+    color: #ffffff;
+    margin: 0;
+    font-size: 3em;
+    font-weight: 800;
+    text-shadow: 0 0 10px #000000;
+    display: inline-block;
+    position: absolute;
+    top: 75px;
+    left: 1.8em;
+    overflow: visible;
+}
+
+.DescReq {
+    border-top: solid 1px #404040;
+    margin: 25px;
+    padding: 20px 30px;
+    font-family: "Exo 2", sans-serif;
+    font-size: 1.2em;
+    font-weight: 100;
+    text-align: left;
+}
+
+.Imagen {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+    right: 0;
+    top: 0;
+}
+
+.Img {
+    width: 100%;
+    filter: drop-shadow(0 0 50px #ffffff3a);
+    overflow: visible;
+}
+
+.Flechas {
+    position: absolute;
+    width: 100%;
+    height: 62px;
+    bottom: 50px;
+    overflow: visible;
+}
+
+.Flechas button {
+    background-color: #ffffff00;
+    color: #868686;
+    border: none;
+    border-radius: 15px;
+    font-family: "Exo 2", sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    margin: 18px;
+    padding: 5px 10px;
+}
+
+.Flechas button:hover {
+    background-color: #ffffff;
+    color: #000000;
+    font-weight: 500;
+    box-shadow: 0 0 30px #000000;
+    transform: translateY(-2px);
+}
+
+.Ant {
+    position: absolute;
+    left: 0px;
+}
+
+.Sig {
+    position: absolute;
+    right: 0px;
+}
+
+.BarUsr {
+    background-color: #979797;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    box-shadow: 0 0 30px #000000;
+}
+
+.BarUsr h3 {
+    border-radius: 1em;
+    margin: 4px;
+    padding: 1px 9px;
+    font-size: 0.7em;
+    font-weight: 700;
+}
+
+.Aplica {
+    color: #323232;
+}
+
+.Admin {
+    background-color: #850000;
+    color: #ffffff;
+    box-shadow: 0 0 5px 3px #00000029;
+}
+
+.Esc {
+    background-color: #a54f09;
+    color: #ffffff;
+    box-shadow: 0 0 5px 3px #00000029;
+}
+
+.Rev {
+    background-color: #d1ba0e;
+    color: #ffffff;
+    box-shadow: 0 0 5px 3px #00000029;
+}
+
+.BarReq {
+    background-color: #424242;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+}
+
+.BarReq h3 {
+    border-radius: 1em;
+    margin: 4px;
+    padding: 1px 9px;
+    font-size: 0.7em;
+    box-shadow: 0 0 5px 3px #00000029;
+}
+
+.ReqFun {
+    background-color: #b7b7b7;
+    color: #424242;
+}
+
+.ReqNoFun {
+    background-color: #191919;
+    color: #b7b7b7;
+}
+
+.Lista {
+    color: #b2b2b2;
+    font-size: 0.85em;
+}
+
+footer {
+    background: linear-gradient(90deg, #000000, #151515);
+    box-shadow: 0 -5px 15px #000000;
+    overflow: auto;
+}
+
+footer h5 {
+    color: #808080;
+    margin: 10px;
+    font-family: "Exo 2", sans-serif;
+    font-weight: 500;
+    text-align: center;
+}

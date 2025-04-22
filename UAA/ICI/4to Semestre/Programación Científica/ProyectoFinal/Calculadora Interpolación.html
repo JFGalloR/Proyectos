@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Recursos/Estilo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="Recursos/Script.js"></script>
+    <link rel="icon" href="Recursos/Icon.png" type="image/x-icon">
+    <title>Calculadora | Interpolación</title>
+</head>
+<body>
+    <div class="Contenido">
+
+        <div class="Titulo">
+
+            <div class="Bar"></div>
+
+            <div class="ContTit">
+                <h2>Calculadora de</h2>
+                <h1>Interpolación</h1>
+            </div>
+
+        </div>
+
+        <div class="Inputs">
+            <div class="AgregarInputs">
+
+                <h3>Agregar Datos</h3>
+
+                <div>
+                    <label for="x_in">Valor de <i>x<sub>i</sub></i></label>
+                    <input type="number" name="x_in" id="x_in" placeholder="- - -">
+                    <br>
+                    <label for="y_in">Valor en <i>f(x<sub>i</sub>)</i></label>
+                    <input type="number" name="y_in" id="y_in" placeholder="- - -">
+                    <br>
+                </div>
+                <button onclick="ValidarAgr()">Agregar</button>
+            </div>
+
+            <div class="ConfigModelo">
+                <h3>Configuración del Modelo</h3>
+                <div>
+                    <label for="Grado">Grado del polinomio</label>
+                    <select name="grado" id="Grado" disabled></select>
+                    <br>
+                    <label>Tipo de método</label>
+                    <div>
+                        <input type="radio" name="metodo" id="MetNew" value="Newton" checked>
+                        <label for="MetNew">Interpolaciónde Newton</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="metodo" id="MetLag" value="Lagrange">
+                        <label for="MetLag">Interpolación de Lagrange</label>
+                    </div>
+                </div>
+                <button onclick="ValidarCalc()">Calcular</button>
+            </div>
+
+            <div class="TablaInputs">
+                <h3>Datos Agregados</h3>
+
+                <div>
+                    <table id="TablaIn">
+                        <thead>
+                            <tr>
+                                <th id="xi" colspan="2">x<sub>i</sub></th>
+                                <th id="fxi" colspan="2">f(x<sub>i</sub>)</th>
+                                <th id="BtnElm"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>- - -</td>
+                                <td>- - -</td>
+                                <td>- - -</td>
+                                <td>- - -</td>
+                                <td>- - -</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="Contenedor">
+
+            <div class="Inter BorNew">
+                <h3 class="TitInt">Interpolación de <span id="Modelo">Modelo</span></h3>
+                <h4>Polinomio de interpolación:</h4>
+                <div>
+                    <h3>f<sub id="GPol">n</sub>(x) = </h3>
+                    <h2 id="Pol"></h2>
+                </div>
+            </div>
+
+            <div class="Outputs">
+
+                <div class="TablaOut">
+                    <h3>Evaluación en puntos</h3>
+                    <div>
+                        <div class="ContTab">
+                            <table id="TablaEv">
+                                <tbody>
+                                    <tr>
+                                        <td>- - -</td>
+                                        <td>- - -</td>
+                                        <td>- - -</td>
+                                        <td>- - -</td>
+                                        <td>- - -</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="EvPunt">
+                            <label for="x_ev">Valor de <i>x</i></label>
+                            <input type="number" name="x_ev" id="x_ev" placeholder="- - -">
+                            <br>
+                        </div>
+                    </div>
+
+                    <button onclick="ValidarAgrEval()">Evaluar</button>
+                </div>
+
+                <div class="Grafica">
+                    <h3>Gráfica</h3>
+                    <div>
+                        <canvas id="GraficaInt"></canvas>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+    </div>
+
+    <footer><p>Juan Francisco Gallo Ramírez</p><p>Luis Pablo Esparza Terrones</p></footer>
+</body>
+</html>

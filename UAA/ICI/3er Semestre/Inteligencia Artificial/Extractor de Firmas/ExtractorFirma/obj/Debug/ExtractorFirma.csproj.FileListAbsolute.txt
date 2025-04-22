@@ -1,0 +1,33 @@
+C:\Users\xxjfg\Desktop\ExtractorFirma\bin\Debug\ExtractorFirma.exe.config
+C:\Users\xxjfg\Desktop\ExtractorFirma\bin\Debug\ExtractorFirma.exe
+C:\Users\xxjfg\Desktop\ExtractorFirma\bin\Debug\ExtractorFirma.pdb
+C:\Users\xxjfg\Desktop\ExtractorFirma\obj\Debug\ExtractorFirma.csproj.AssemblyReference.cache
+C:\Users\xxjfg\Desktop\ExtractorFirma\obj\Debug\ExtractorFirma.VentanaInicial.resources
+C:\Users\xxjfg\Desktop\ExtractorFirma\obj\Debug\ExtractorFirma.Properties.Resources.resources
+C:\Users\xxjfg\Desktop\ExtractorFirma\obj\Debug\ExtractorFirma.csproj.GenerateResource.cache
+C:\Users\xxjfg\Desktop\ExtractorFirma\obj\Debug\ExtractorFirma.csproj.CoreCompileInputs.cache
+C:\Users\xxjfg\Desktop\ExtractorFirma\obj\Debug\ExtractorFirma.exe
+C:\Users\xxjfg\Desktop\ExtractorFirma\obj\Debug\ExtractorFirma.pdb
+C:\Users\xxjfg\Desktop\ExtractorFirma\obj\Debug\ExtractorFirma.VentanaExtraccion.resources
+C:\Users\xxjfg\Desktop\ia\Actividad3_01. Reconocimiento de Patrones\ExtractorFirma\bin\Debug\ExtractorFirma.exe.config
+C:\Users\xxjfg\Desktop\ia\Actividad3_01. Reconocimiento de Patrones\ExtractorFirma\bin\Debug\ExtractorFirma.exe
+C:\Users\xxjfg\Desktop\ia\Actividad3_01. Reconocimiento de Patrones\ExtractorFirma\bin\Debug\ExtractorFirma.pdb
+C:\Users\xxjfg\Desktop\ia\Actividad3_01. Reconocimiento de Patrones\ExtractorFirma\obj\Debug\ExtractorFirma.csproj.AssemblyReference.cache
+C:\Users\xxjfg\Desktop\ia\Actividad3_01. Reconocimiento de Patrones\ExtractorFirma\obj\Debug\ExtractorFirma.VentanaExtraccion.resources
+C:\Users\xxjfg\Desktop\ia\Actividad3_01. Reconocimiento de Patrones\ExtractorFirma\obj\Debug\ExtractorFirma.VentanaInicial.resources
+C:\Users\xxjfg\Desktop\ia\Actividad3_01. Reconocimiento de Patrones\ExtractorFirma\obj\Debug\ExtractorFirma.Properties.Resources.resources
+C:\Users\xxjfg\Desktop\ia\Actividad3_01. Reconocimiento de Patrones\ExtractorFirma\obj\Debug\ExtractorFirma.csproj.GenerateResource.cache
+C:\Users\xxjfg\Desktop\ia\Actividad3_01. Reconocimiento de Patrones\ExtractorFirma\obj\Debug\ExtractorFirma.csproj.CoreCompileInputs.cache
+C:\Users\xxjfg\Desktop\ia\Actividad3_01. Reconocimiento de Patrones\ExtractorFirma\obj\Debug\ExtractorFirma.exe
+C:\Users\xxjfg\Desktop\ia\Actividad3_01. Reconocimiento de Patrones\ExtractorFirma\obj\Debug\ExtractorFirma.pdb
+F:\3er Semestre\Inteligencia Artificial\Extractor de Firmas\ExtractorFirma\bin\Debug\ExtractorFirma.exe.config
+F:\3er Semestre\Inteligencia Artificial\Extractor de Firmas\ExtractorFirma\bin\Debug\ExtractorFirma.exe
+F:\3er Semestre\Inteligencia Artificial\Extractor de Firmas\ExtractorFirma\bin\Debug\ExtractorFirma.pdb
+F:\3er Semestre\Inteligencia Artificial\Extractor de Firmas\ExtractorFirma\obj\Debug\ExtractorFirma.csproj.AssemblyReference.cache
+F:\3er Semestre\Inteligencia Artificial\Extractor de Firmas\ExtractorFirma\obj\Debug\ExtractorFirma.VentanaExtraccion.resources
+F:\3er Semestre\Inteligencia Artificial\Extractor de Firmas\ExtractorFirma\obj\Debug\ExtractorFirma.VentanaInicial.resources
+F:\3er Semestre\Inteligencia Artificial\Extractor de Firmas\ExtractorFirma\obj\Debug\ExtractorFirma.Properties.Resources.resources
+F:\3er Semestre\Inteligencia Artificial\Extractor de Firmas\ExtractorFirma\obj\Debug\ExtractorFirma.csproj.GenerateResource.cache
+F:\3er Semestre\Inteligencia Artificial\Extractor de Firmas\ExtractorFirma\obj\Debug\ExtractorFirma.csproj.CoreCompileInputs.cache
+F:\3er Semestre\Inteligencia Artificial\Extractor de Firmas\ExtractorFirma\obj\Debug\ExtractorFirma.exe
+F:\3er Semestre\Inteligencia Artificial\Extractor de Firmas\ExtractorFirma\obj\Debug\ExtractorFirma.pdb

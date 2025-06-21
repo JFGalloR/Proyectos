@@ -1,2 +1,2 @@
 # Proyectos
-Repositorio destinado a todo proyecto elaborados, tanto escolares como personales.
+Repositorio destinado a todo proyecto elaborado, tanto escolares como personales.
